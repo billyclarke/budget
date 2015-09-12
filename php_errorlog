@@ -1,0 +1,569 @@
+[14-Nov-2014 10:52:25 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:52:25 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:52:25 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 10:52:31 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:52:31 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 10:52:31 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 10:52:35 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 10:53:33 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:53:33 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 10:53:33 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:53:40 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 10:53:40 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 10:53:40 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 15:03:16 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:03:16 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:03:16 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 15:03:22 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:03:22 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 15:03:23 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 15:06:54 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:06:55 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:06:55 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 15:07:13 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 15:07:13 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 15:07:13 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:25:05 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:25:05 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:25:05 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:25:09 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:25:09 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 16:25:09 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:28:17 America/Chicago] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:28:17 America/Chicago] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:28:17 America/Chicago] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:31:03 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:31:09 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:13 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:17 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:17 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:17 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:31:37 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:37 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 16:31:37 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:31:50 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:50 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:31:50 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:53 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:53 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:31:53 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:32:59 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:32:59 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:33:07 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:33:07 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 16:33:07 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:35:41 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:35:42 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:35:42 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:35:48 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:35:48 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 16:35:48 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[14-Nov-2014 16:40:21 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:40:21 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:40:21 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[14-Nov-2014 16:40:31 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[14-Nov-2014 16:40:31 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[14-Nov-2014 16:40:31 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[16-Nov-2014 12:46:15 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[16-Nov-2014 12:46:15 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[16-Nov-2014 12:46:15 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[16-Nov-2014 12:49:26 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[16-Nov-2014 12:49:26 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 16
+[16-Nov-2014 12:49:26 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/check_auth.php on line 4
+[16-Nov-2014 12:52:07 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/speceven/public_html/budget/db.php on line 7
+[16-Nov-2014 12:52:07 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget/db.php on line 17
+[21-Dec-2014 19:45:48 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget2/db.php on line 14
+[21-Dec-2014 19:57:03 America/Chicago] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/speceven/public_html/budget2/check_auth.php on line 4
+[13-Jan-2015 17:25:11 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 43
+[13-Jan-2015 17:25:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 12:30:58 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 43
+[15-Jan-2015 13:17:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 13:17:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 43
+[15-Jan-2015 13:48:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 13:49:04 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 13:57:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 13:57:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Jan-2015 14:14:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Jan-2015 09:38:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 11:42:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 11:56:37 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 13:43:04 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 13:43:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 13:45:11 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Jan-2015 14:12:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[21-Jan-2015 11:43:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[21-Jan-2015 13:24:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[26-Jan-2015 12:01:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Jan-2015 11:09:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Jan-2015 11:13:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 14:46:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:09:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:10:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:11:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:13:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:17:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:18:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 15:19:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Jan-2015 17:09:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:06:18 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:08:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:09:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:09:58 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:10:11 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:11:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:14:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:15:11 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:16:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:18:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Feb-2015 14:21:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:34:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:35:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:36:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:37:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:53:46 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 12:54:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 13:09:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Feb-2015 13:25:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Feb-2015 11:07:06 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Feb-2015 11:07:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Feb-2015 14:33:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Feb-2015 16:10:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Feb-2015 15:37:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Feb-2015 15:38:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[11-Feb-2015 10:18:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-Feb-2015 15:33:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[16-Feb-2015 12:56:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[16-Feb-2015 13:09:37 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[16-Feb-2015 13:10:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 12:42:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:05:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:05:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:05:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:05:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:07:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:13:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:17:04 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:18:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Feb-2015 13:44:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 07:58:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 07:58:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 07:59:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 07:59:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:00:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:00:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:01:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:02:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:02:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:03:06 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:03:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:04:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:04:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 08:05:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 11:59:05 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:00:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:01:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:02:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:03:10 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:03:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:04:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:05:18 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:17:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:25:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:25:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:26:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:28:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:30:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:30:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:42:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 12:58:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 13:01:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 13:22:31 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 13:24:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[18-Feb-2015 13:26:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:27:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:28:18 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:28:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:31:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:33:48 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:45:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:47:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:48:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:49:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:51:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:52:06 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:54:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:55:20 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:56:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:57:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:58:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:58:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 08:59:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:00:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:02:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:03:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:05:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:06:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:07:30 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:09:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:10:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:13:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 09:13:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 15:14:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 15:26:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 15:33:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 15:36:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Feb-2015 15:39:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Feb-2015 12:40:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Feb-2015 13:35:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Feb-2015 13:22:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Feb-2015 13:27:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Feb-2015 13:30:12 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Feb-2015 13:31:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Feb-2015 12:28:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Feb-2015 12:29:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Feb-2015 13:02:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Feb-2015 13:06:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Feb-2015 13:09:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Mar-2015 13:14:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Mar-2015 13:14:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Mar-2015 13:19:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Mar-2015 13:19:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Mar-2015 13:23:05 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-Mar-2015 12:13:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Mar-2015 10:22:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Mar-2015 10:24:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Mar-2015 10:28:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-Mar-2015 10:30:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[17-Mar-2015 17:12:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[19-Mar-2015 16:07:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 13:19:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 13:20:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 14:21:06 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 14:27:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 14:31:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 14:34:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Mar-2015 15:03:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Mar-2015 14:06:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Mar-2015 13:08:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Mar-2015 10:04:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Mar-2015 15:13:30 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Mar-2015 15:14:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Mar-2015 15:39:10 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Mar-2015 15:39:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 12:34:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 12:34:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 12:34:58 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 12:35:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 12:35:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:36:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:37:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:38:31 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:40:04 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:40:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:41:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:41:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:42:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:43:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:44:20 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:44:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:45:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:46:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:47:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 13:48:06 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:22:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:23:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:24:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:26:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:27:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:29:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:30:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:31:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:34:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Apr-2015 14:38:18 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 12:33:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 12:34:10 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 12:35:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 14:42:52 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 14:54:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 14:55:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Apr-2015 15:55:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Apr-2015 11:32:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Apr-2015 11:35:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Apr-2015 11:38:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-Apr-2015 12:56:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:17:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:19:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:21:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:22:12 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:22:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:55:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 11:56:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 12:19:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 12:19:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 12:42:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 12:46:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 12:48:25 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:01:03 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:04:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:12:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:13:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:21:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:23:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:23:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:24:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:25:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:26:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:32:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:34:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:35:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-Apr-2015 13:41:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-Apr-2015 13:50:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-Apr-2015 14:08:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 12:50:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 12:51:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 12:52:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 14:23:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 14:49:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 15:33:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Apr-2015 15:35:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 13:37:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 13:44:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 13:45:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 14:15:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 14:17:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 14:19:30 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:14:52 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:18:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:21:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:39:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:42:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Apr-2015 15:44:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[10-Apr-2015 16:32:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[13-Apr-2015 14:24:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[14-Apr-2015 13:38:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 11:10:30 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 11:12:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 12:43:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 12:45:04 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 12:45:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[15-Apr-2015 13:04:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[16-Apr-2015 16:31:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 13:12:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 13:19:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:02:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:03:58 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:39:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:41:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:42:58 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 15:45:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[20-Apr-2015 17:56:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[21-Apr-2015 09:23:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Apr-2015 11:15:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Apr-2015 11:17:37 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[22-Apr-2015 11:19:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:43:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:48:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:55:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:57:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:57:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 14:57:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 15:11:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 15:18:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 15:19:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 15:28:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[23-Apr-2015 15:29:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 13:20:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 13:22:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 14:05:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 14:06:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 14:09:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[24-Apr-2015 14:10:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Apr-2015 14:00:05 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Apr-2015 14:02:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Apr-2015 14:03:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[27-Apr-2015 14:12:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Apr-2015 09:00:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Apr-2015 09:01:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Apr-2015 09:01:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Apr-2015 09:06:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Apr-2015 15:12:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[29-Apr-2015 11:00:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[29-Apr-2015 12:06:11 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:01:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:04:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:06:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:11:21 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:13:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:17:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:21:05 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:39:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:39:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 14:39:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 15:03:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[30-Apr-2015 15:04:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[03-May-2015 14:28:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:17:01 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:19:32 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:21:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:23:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:25:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:51:49 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:52:47 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:53:48 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:54:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 13:55:41 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 14:36:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 14:37:22 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 16:01:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 16:48:48 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[04-May-2015 16:53:20 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-May-2015 19:45:19 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[05-May-2015 19:55:09 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:27:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:27:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:27:54 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:28:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:28:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:30:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:32:29 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 12:38:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 13:13:40 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 13:21:27 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 13:25:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:18:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:19:15 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:19:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:22:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:23:23 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:28:12 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:30:34 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:31:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:33:14 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:33:51 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:36:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 17:37:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 18:58:31 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:12:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:15:00 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:20:07 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:23:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:23:53 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:31:37 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:32:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:38:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:42:24 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:43:05 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:47:10 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[06-May-2015 19:47:57 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 11:46:16 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 11:47:42 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 16:40:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 16:41:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 16:42:45 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 17:01:44 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 17:20:33 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 17:45:10 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 17:48:21 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 18:06:20 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 21:07:36 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 21:11:08 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 21:16:13 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-May-2015 21:21:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:35:35 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:37:38 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:41:50 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:42:17 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:50:46 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:53:48 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-May-2015 14:54:20 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 10:41:26 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 10:42:55 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 10:48:56 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 11:02:02 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 11:10:39 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 11:12:28 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[12-May-2015 11:12:59 America/Chicago] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:20:05 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:21:21 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:22:48 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:28:20 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:28:37 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:29:16 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:31:02 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:31:44 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:32:19 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:32:47 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:33:37 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:35:40 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:41:12 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:42:04 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:43:05 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:43:37 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:44:25 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:44:56 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:46:14 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:47:08 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:49:38 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:50:21 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:51:08 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:52:04 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:53:13 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:53:43 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:54:39 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:56:09 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:56:41 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:57:08 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:57:33 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:59:04 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 03:59:37 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:00:09 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:02:08 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:02:34 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:03:39 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:04:30 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:06:09 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:06:32 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:08:07 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:08:57 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:11:07 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:11:41 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:13:26 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Aug-2015 04:14:15 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Aug-2015 14:17:53 CST6CDT] PHP Notice:  Undefined variable: SelectedTables in /home/speceven/public_html/budget/backupDB.php on line 311
+[25-Aug-2015 14:17:53 CST6CDT] PHP Warning:  Invalid argument supplied for foreach() in /home/speceven/public_html/budget/backupDB.php on line 311
+[25-Aug-2015 14:17:53 CST6CDT] PHP Notice:  Undefined variable: SelectedTables in /home/speceven/public_html/budget/backupDB.php on line 367
+[25-Aug-2015 14:17:53 CST6CDT] PHP Warning:  Invalid argument supplied for foreach() in /home/speceven/public_html/budget/backupDB.php on line 367
+[25-Aug-2015 14:17:53 CST6CDT] PHP Notice:  Undefined variable: SelectedTables in /home/speceven/public_html/budget/backupDB.php on line 387
+[25-Aug-2015 14:17:53 CST6CDT] PHP Warning:  Invalid argument supplied for foreach() in /home/speceven/public_html/budget/backupDB.php on line 387
+[25-Aug-2015 14:17:53 CST6CDT] PHP Notice:  Undefined variable: SelectedTables in /home/speceven/public_html/budget/backupDB.php on line 483
+[25-Aug-2015 14:17:53 CST6CDT] PHP Warning:  Invalid argument supplied for foreach() in /home/speceven/public_html/budget/backupDB.php on line 483
+[25-Aug-2015 14:17:53 CST6CDT] PHP Deprecated:  Function ereg_replace() is deprecated in /home/speceven/public_html/budget/backupDB.functions.php on line 268
+[25-Aug-2015 15:23:29 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Aug-2015 15:25:14 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Aug-2015 15:25:31 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Aug-2015 15:26:25 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[25-Aug-2015 15:27:09 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Aug-2015 15:04:17 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Aug-2015 15:16:23 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[28-Aug-2015 15:16:23 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Sep-2015 11:38:56 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Sep-2015 11:41:19 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Sep-2015 12:54:27 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Sep-2015 15:05:27 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[01-Sep-2015 15:05:57 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[02-Sep-2015 11:30:48 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[07-Sep-2015 12:09:52 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Sep-2015 11:59:18 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[08-Sep-2015 12:01:43 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:36:32 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:37:41 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:39:27 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:46:47 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:56:01 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:56:50 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 11:57:45 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[09-Sep-2015 13:55:53 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[10-Sep-2015 13:32:49 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[10-Sep-2015 13:38:40 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[11-Sep-2015 12:11:30 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 11
+[11-Sep-2015 19:26:12 CST6CDT] PHP Deprecated:  Function ereg() is deprecated in /home/speceven/public_html/budget/form_validate.php on line 23
