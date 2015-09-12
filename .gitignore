@@ -1,2 +1,5 @@
 db.php
 backupdb/
+php_errorlog
+php_mail.log
+error_log

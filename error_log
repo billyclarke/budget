@@ -1,7 +1,0 @@
-[24-Nov-2008 18:33:21] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[24-Nov-2008 18:33:21] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[24-Nov-2008 18:33:21] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[24-Nov-2008 18:33:21] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[24-Nov-2008 18:33:21] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[24-Nov-2008 18:33:22] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/sub_ajax.php on line 6
-[04-Apr-2009 22:45:43] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/speceven/public_html/budget/committee_budget.php on line 69
