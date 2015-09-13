@@ -4,7 +4,7 @@ if($_GET['destroy'] == "yes"){
 	session_destroy();
 	die("You have been logged out.");
 }
-require_once("db.php");
+require_once("functions.php");
 if($_GET['comp'] != "SPEC_OSL"){
 	die("Not authorized - This application can only be used from computers inside of the SPEC office.");
 }
@@ -33,7 +33,8 @@ if(!$_GET['auth']){
 						<td>
 							<select name="name" style="width: 110px">
 								<?php
-									$sql = "SELECT `name` FROM `directors` WHERE 1 AND `committee` = '".$_GET['auth']."' AND `deleted` = 'no' ORDER BY `name`";
+                  $committee_id = get_committee_id($_GET['auth']);
+									$sql = "SELECT `name` FROM `budget_users` WHERE 1 AND `committee_id` = '".$committee_id."' AND `deleted` = 'no' ORDER BY `name`";
 									$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 									while($row = mysqli_fetch_array($result)){
 										echo "<option>".$row[0]."</option>";

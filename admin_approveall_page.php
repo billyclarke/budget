@@ -31,7 +31,7 @@ if($_SESSION['s_auth'] != "Admin"){
 	</head>
 	<body>
     <?php
-      $sql = 'SELECT `id`,`committee`,`requestor`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`type` FROM `budget` WHERE 1 AND `treasurer_approved` = \'no\' AND `deleted` = \'no\' ORDER BY `id` DESC';
+      $sql = 'SELECT `id`,`committee_id`,`requestor_id`,`action_date`,`item`,`vendor`,`cost`,`category_id`,`subcategory`,`type_id` FROM `budget_transactions` WHERE 1 AND `treasurer_approved` = \'no\' AND `deleted` = \'no\' ORDER BY `id` DESC';
       $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
       if(mysqli_num_rows($result) > 0){
     ?>
@@ -46,7 +46,7 @@ if($_SESSION['s_auth'] != "Admin"){
           if($row[6] < 0){
             $neg = "-";
           }
-          echo "<tr><td>[<a href='approve.php?id=".$row[0]."'>Approve</a>]</td><td>".$row[3]."</td><td>".$row[1]." (".$row[7].")</td><td>".$row[2]."</td><td>".$neg."$".number_format(abs($row[6]),2)."</td><td>".$row[9]."</td><td>".$row[5]." - ".$row[4]."</td></tr>";
+          echo "<tr><td>[<a href='approve.php?id=".$row[0]."'>Approve</a>]</td><td>".$row[3]."</td><td>".get_committee_string($row[1])." (".get_category_string($row[7]).")</td><td>".get_user_string($row[2])."</td><td>".$neg."$".number_format(abs($row[6]),2)."</td><td>".get_type_string($row[9])."</td><td>".$row[5]." - ".$row[4]."</td></tr>";
         }
         echo "</table></div>";
       }

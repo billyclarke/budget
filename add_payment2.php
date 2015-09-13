@@ -68,7 +68,11 @@ require_once("db.php");
 $today = date("Y-m-d");
 $date = $_POST['paid_date'];
 $date = substr($date,6,4)."-".substr($date,0,2)."-".substr($date,3,2);
-$sql = 'INSERT INTO `budget` (`id`, `committee`, `submitted`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `sub`, `type`, `treasurer_approved`, `advisor_approved`,`note`) VALUES (\'\', \''.$_POST['committee'].'\', \''.$today.'\', \''.$_POST['requestor'].'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \''.$_POST['cost'].'\', \''.$_POST['main'].'\', \''.$_POST['sub'].'\', \''.$_POST['expense'].'\', \'no\', \'no\',\''.$_POST['note'].'\');';
+$committee_id = get_committee_id($_POST['committee']);
+$requestor_id = get_user_id($_POST['requestor']);
+$category_id = get_category_id($_POST['main'], $committee_id);
+$type_id = get_type_id($_POST['expense']);
+$sql = 'INSERT INTO `budget` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`, `note`) VALUES (\'\', \''.$committee_id.'\', \''.$today.'\', \''.$requestor_id.'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \''.$_POST['cost'].'\', \''.$category_id.'\', \''.$_POST['sub'].'\', \''.$type_id.'\', \'no\',\''.$_POST['note'].'\');';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 ?>
 <html>

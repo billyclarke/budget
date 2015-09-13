@@ -1,6 +1,6 @@
 <?php
 require_once("check_auth.php");
-require_once("db.php");
+require_once("functions.php");
 if($_SESSION['s_auth'] != "Admin"){
 	die("You are not authorized to view this page with your credentials.");
 }
@@ -25,7 +25,7 @@ if(!$_POST['committee']){
 </html>
 <?php
 }else{
-$sql = 'INSERT INTO `budget_item` (`id`, `committee`, `item`, `budget_category` , `deleted`) VALUES (\'\', \''.$_POST["committee"].'\', \''.$_POST["item"].'\',\''.$_POST["bc"].'\' , \'no\');';
+$sql = 'INSERT INTO `budget_categories` (`id`, `committee_id`, `name`, `budget_code` , `deleted`) VALUES (\'\', \''.get_committee_id($_POST["committee"]).'\', \''.$_POST["item"].'\',\''.$_POST["bc"].'\' , \'no\');';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 header("Location: committee_budget.php?committee=".$_POST['committee']);
 }

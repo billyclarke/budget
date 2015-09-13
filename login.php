@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("db.php");
-$sql = 'SELECT `id` FROM `directors` WHERE 1 AND `name` = \''.$_POST["name"].'\' AND `password` = \''.md5($_POST["password"]).'\' AND `deleted` = \'no\' LIMIT 0, 1';
+$sql = 'SELECT `id` FROM `budget_users` WHERE 1 AND `name` = \''.$_POST["name"].'\' AND `password` = \''.md5($_POST["password"]).'\' AND `deleted` = \'no\' LIMIT 0, 1';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 if(mysqli_num_rows($result) == 0){
 	die("Incorrect password");

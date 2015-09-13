@@ -63,17 +63,20 @@ if($validated == "no"){
 }
 
 require_once("check_auth.php");
-require_once("db.php");
 require_once("functions.php");
 $today = date("Y-m-d");
 $date = $_POST['paid_date'];
 $date = substr($date,6,4)."-".substr($date,0,2)."-".substr($date,3,2);
-$sql = 'INSERT INTO `budget` (`id`, `committee`, `submitted`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `sub`, `type`, `treasurer_approved`, `advisor_approved`,`note`) VALUES (\'\', \''.$_POST['committee'].'\', \''.$today.'\', \''.$_POST['requestor'].'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \'-'.$_POST['cost'].'\', \''.$_POST['main'].'\', \''.$_POST['sub'].'\', \''.$_POST['expense'].'\', \'no\', \'no\',\''.$_POST['note'].'\');';
+$committee_id = get_committee_id($_POST['committee']);
+$user_id = get_user_id($_POST['requestor']);
+$category_id = get_category_id($_POST['main'], $committee_id);
+$type_id = get_type_id($_POST['expense']);
+$sql = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`,`note`) VALUES (\'\', \''.$committee_id.'\', \''.$today.'\', \''.$user_id.'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \'-'.$_POST['cost'].'\', \''.$category_id.'\', \''.$_POST['sub'].'\', \''.$type_id.'\', \'no\',\''.$_POST['note'].'\');';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 $item_id = ((is_null($___mysqli_res = mysqli_insert_id($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
 
 
-$sql = 'SELECT `cost` FROM `budget` WHERE 1 AND `committee` = \''.$_POST['committee'].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+$sql = 'SELECT `cost` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.get_committee_id($_POST['committee']).'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
 $result_budget = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 $total_budget = 0;
 $total_expenses = 0;
@@ -99,7 +102,7 @@ if(abs($total_expenses/$total_budget) > 1){
 	//echo mysql_result();
 }else{
 }
-$sql = 'SELECT `cost` FROM `budget` WHERE 1 AND `committee` = \''.$_POST['committee'].'\' AND `main` = \''.$_POST['main'].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+$sql = 'SELECT `cost` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.get_committee_id($_POST['committee']).'\' AND `category_id` = \''.get_category_id($_POST['main']).'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
 $result_sub = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 $sub_budget = 0;
 $sub_expenses = 0;
@@ -125,7 +128,7 @@ if(abs($sub_expenses/$sub_budget) > 1){
 }
 
 $url = "";
-if($_POST["expense"] == "ProCard"){
+if($_POST["expense"] == "Purchasing Card"){
 	$url = "onload=\"window.location = 'createpcard.php?id=".$item_id."'\"";
 }
 if($_POST["expense"] == "Budget Transfer"){
@@ -145,7 +148,7 @@ if($_POST["expense"] == "Petty Cash"){
 	</head>
 	<body <?php echo $url; ?>>
 		<h2>Thank you for your submission</h2>
-		<p>Please remember to submit the proper OSL paperwork as well.</p>
+		<p>Please remember to submit the proper OSA paperwork as well.</p>
 		<h2><?php echo $warning1; ?></h2>
 		<h2><?php echo $warning2; ?></h2>
 	</body>

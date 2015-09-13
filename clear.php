@@ -1,6 +1,6 @@
 <?php
 require_once("check_auth.php");
-require_once("db.php");
+require_once("functions.php");
 if($_SESSION['s_auth'] != "Admin"){
 	die("You are not authorized to view this page with your credentials.");
 }

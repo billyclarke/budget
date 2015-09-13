@@ -39,11 +39,13 @@ $committee = $_GET['committee'];
 		<?php
 			$budget = 0;
 			$expenses = 0;
-			$sql = 'SELECT `cost`,`type` FROM `budget` WHERE 1 AND `committee` = \''.$committee.'\' AND `main` = \''.$_GET["main"].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+      $committee_id = get_committee_id($committee);
+      $category_id = get_category_id($_GET["main"],$committee_id);
+			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
 				if($row_2[0] < 0){
-					if($row_2[1] == "Internal Budget Transfer"){
+					if($row_2[1] == get_type_id("Internal Budget Transfer")){
 						$budget = $budget + $row_2[0];
 					}else{
 						$expenses = $expenses + $row_2[0];
@@ -52,14 +54,12 @@ $committee = $_GET['committee'];
 					$budget = $budget + $row_2[0];
 				}
 			}
-			
-			$sql = 'SELECT `budget_category` FROM `budget_item` WHERE `committee` = \''.$committee.'\' AND `item` = \''.$_GET["main"].'\' AND `deleted` = \'no\'';
+			$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE 1 AND `id` = \''.$category_id.'\' AND `deleted` = \'no\'';
 			//echo $sql;
 			$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-			$budget_category = mysqli_fetch_row($result2);
-			$budget_category = $budget_category[0];
-			
-			echo draw_expense($expenses,$budget,$_GET["main"]." - ".$budget_category,'');
+			$budget_code = mysqli_fetch_row($result2);
+			$budget_code = $budget_code[0];
+			echo draw_expense($expenses,$budget,get_category_string($category_id)." - ".$budget_code,'');
 		?>
 		</div>
 		<table class="ex" cellspacing="0" border="1" cellpadding="3" width="95%">
@@ -76,10 +76,10 @@ $committee = $_GET['committee'];
 				<td align="center"><b>Vendor</b></td>
 				<td align="center"><b>Debits</b></td>
 				<td align="center"><b>Credits</b></td>
-				<td align="center"><b>Notes</b></td>				
+				<td align="center"><b>Notes</b></td>
 			</tr>
 				<?php
-					$sql = 'SELECT `sub` FROM `budget` WHERE 1 AND `committee` = \''.$_GET["committee"].'\' AND `main` = \''.$_GET["main"].'\'  AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\' ORDER BY `sub` ASC';
+					$sql = 'SELECT `subcategory` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\'  AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\' ORDER BY `subcategory` ASC';
 					$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 					$i = 0;
 					while($row = mysqli_fetch_array($result)){
@@ -93,18 +93,29 @@ $committee = $_GET['committee'];
 						$sub = array_keys(array_flip($sub_temp));
 					}
 					for($j = 0; $j < sizeof($sub)+1; $j++){
-						$sql = 'SELECT `type`,`date`,`item`,`vendor`,`cost`,`requestor`,`id`,`note`,`treasurer_approved` FROM `budget` WHERE 1 AND `committee` = \''.$committee.'\' AND `main` = \''.$_GET["main"].'\' AND `sub` = \''.$sub[$j].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\' ORDER BY `date` DESC';
+						$sql = 'SELECT `type_id`,`action_date`,`item`,`vendor`,`cost`,`requestor_id`,`id`,`note`,`treasurer_approved` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\' AND `subcategory` = \''.$sub[$j].'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\' ORDER BY `action_date` DESC';
 						$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 						$temp_out = "";
 						$credits = 0;
 						$debits = 0;
 						while($row = mysqli_fetch_array($result)){
-							if($row[4] < 0){
-								$debits = $debits + $row[4];
+              $type_id = $row[0];
+              $type_string = get_type_string($type_id);
+              $action_date = $row[1];
+              $item = $row[2];
+              $vendor = $row[3];
+              $cost = $row[4];
+              $requestor_id = $row[5];
+              $requestor = get_user_string($requestor_id);
+              $id = $row[6];
+              $note = $row[7];
+              $treasurer_approved = $row[8];
+							if($cost < 0){
+								$debits = $debits + $cost;
 							}else{
-								$credits = $credits + $row[4];
+								$credits = $credits + $cost;
 							}
-							if($row[8] == "yes"){
+							if($treasurer_approved == "yes"){
 								$temp_out .= "
 								<tr>";
 							}else{
@@ -114,49 +125,49 @@ $committee = $_GET['committee'];
 							$cspan = 8;
 							if($_SESSION['s_auth'] == "Admin"){
 								$cspan = 9;
-								if($row[2]){
-									$it = $row[2];
+								if($item){
+									$it = $item;
 								}else{
-									$it = $row[0];
+									$it = $type;
 								}
-								$temp_out .= "<td>[<a href='javascript:;' onclick='gourl(".$row[6].",\"".$it."\");'>X</a>]</td>";
+								$temp_out .= "<td>[<a href='javascript:;' onclick='gourl(".$id.",\"".$it."\");'>X</a>]</td>";
 							}
 							$pc1 = "";
 							$pc2 = "";
-							if($row[0] == "ProCard"){
+							if($type_id == get_type_id("Purchasing Card")){
 								$pc1 = "<a href='createpcard.php?id=".$row[6]."'>";
 								$pc2 = "</a>";
 							}
-							if($row[0] == "Budget Transfer"){
+							if($type_id == get_type_id("Budget Transfer")){
 								$pc1 = "<a href='createbudgetxfer.php?id=".$row[6]."'>";
 								$pc2 = "</a>";
 							}
-							if($row[0] == "Reimbursement"){
+							if($type_id == get_type_id("Reimbursement")){
 								$pc1 = "<a href='createreimbursement.php?id=".$row[6]."'>";
 								$pc2 = "</a>";
 							}
-							if($row[0] == "Petty Cash"){
+							if($type_id == get_type_id("Petty Cash")){
 								$pc1 = "<a href='createpettycash.php?id=".$row[6]."'>";
 								$pc2 = "</a>";
 							}
-								$temp_out .= "<td>".$row[5]."&nbsp;</td>
-								<td>".$pc1.stripslashes(ucwords($row[0])).$pc2."&nbsp;</td>
-								<td>".stripslashes(ucwords($row[1]))."&nbsp;</td>
-								<td>".stripslashes(ucwords($row[2]))."&nbsp;</td>
-								<td>".stripslashes(ucwords($row[3]))."&nbsp;</td>";
+								$temp_out .= "<td>".$requestor."&nbsp;</td>
+								<td>".$pc1.stripslashes(ucwords($type)).$pc2."&nbsp;</td>
+								<td>".stripslashes(ucwords($action_date))."&nbsp;</td>
+								<td>".stripslashes(ucwords($item))."&nbsp;</td>
+								<td>".stripslashes(ucwords($vendor))."&nbsp;</td>";
 							if($row[4] < 0){
 								$temp_out .= "
-								<td>$".number_format(abs($row[4]),2)."</td>
+								<td>$".number_format(abs($cost),2)."</td>
 								<td>&nbsp;</td>
 								";
 							}else{
 								$temp_out .= "
 								<td>&nbsp;</td>
-								<td>$".number_format(abs($row[4]),2)."</td>
+								<td>$".number_format(abs($cost),2)."</td>
 								";
 							}
 								
-							$temp_out .= "<td>".stripslashes(ucwords($row[7]))."&nbsp;</td></tr>";
+							$temp_out .= "<td>".stripslashes(ucwords($note))."&nbsp;</td></tr>";
 						}
 						if($budget == 0){
 							$budget = .0001;

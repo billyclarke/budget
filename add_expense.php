@@ -4,7 +4,7 @@ if(!isset($_GET['committee'])){
 	die("No committee selected");
 }
 $committee = $_GET['committee'];
-require_once("db.php");
+require_once("functions.php");
 if($committee == "Admin"){
 	die("The Admin usergroup does not have an associated budget.");
 }
@@ -36,31 +36,26 @@ if($committee == "Admin"){
 			<span class="ss-q-title">Requestor</span>
 			<input type="text" name="requestor" value="<?php echo $_SESSION['s_name'];?>" readonly="true" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Date</span>
 			<span class="ss-q-help">The date the item was paid for (mm/dd/yyyy)</span>
 		<input type="text" class="ss-q-short" name="paid_date" maxlength="10" value="<?php echo $_GET["paid_date"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Item</span>
 			<span class="ss-q-help">Please include a specific description of the item or service purchased</span>
 			<input type="text" class="ss-q-short" name="item" maxlength="200" value="<?php echo $_GET["item"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Vendor</span>
 			<span class="ss-q-help"></span>
 			<input type="text" class="ss-q-short" name="vendor" maxlength="100" value="<?php echo $_GET["vendor"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Cost</span>
 			<span class="ss-q-help">xxxx.xx (no $ or ,)</span>
 			<input type="text" class="ss-q-short" name="cost" maxlength="15" value="<?php echo $_GET["cost"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Expense Type</span>
 			<span class="ss-q-help">How was the item/service paid for</span>
@@ -75,7 +70,7 @@ if($committee == "Admin"){
 					$exp[6] = "Budget Transfer";
 
 				?>
-				<option>ProCard</option>
+				<option>Purchasing Card</option>
 				<option>Reimbursement</option>
 				<option>Check Issued</option>
 				<option>Purchase Order</option>
@@ -84,16 +79,15 @@ if($committee == "Admin"){
 				<option>Budget Transfer</option>
 			</select>
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Main Category</span>
 			<span class="ss-q-help"></span>
 			<select name="main" id="main">
 				<?php
-				$sql = "SELECT `item` FROM `budget_item` WHERE 1 AND `committee` = '".$committee."' AND `deleted` = 'no'";
+				$sql = "SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = '".get_committee_id($committee)."' AND `deleted` = 'no'";
 				$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 				if(mysqli_num_rows($result) == 0){
-					die("Either the committee does not exist or it has not been set up correctly. Please contact Andrew at andrewjshults@gmail.com");
+					die("Either the committee does not exist or it has not been set up correctly. Please contact Billy at billyclarke94@gmail.com");
 				}
 				while($row = mysqli_fetch_array($result)){
 					echo "<option>".$row[0]."</option>";
@@ -101,19 +95,17 @@ if($committee == "Admin"){
 				?>
 			</select>
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Sub Category</span>
 			<span class="ss-q-help">i.e. Hospitality, Production, etc.</span>
 			<input type="text" class="ss-q-short" id="sub" name="sub" maxlength="100" onkeydown="return noenter();" value="<?php echo $_GET["sub"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Notes</span>
 			<span class="ss-q-help">Maximum of 255 characters</span>
 			<textarea rows="2" cols="20" name="note">  <?php echo $_GET["notes"]; ?></textarea>
 		</div>
-<p></p>	
+<p></p>
 <p></p>
 <input type="submit" value="Submit" /></form>
 <p></p>

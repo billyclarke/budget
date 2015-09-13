@@ -4,7 +4,7 @@ if(!isset($_GET['committee'])){
 	die("No committee selected");
 }
 $committee = $_GET['committee'];
-require_once("db.php");
+require_once("functions.php");
 if($committee == "Admin"){
 	die("The Admin usergroup does not have an associated budget.");
 }
@@ -36,31 +36,26 @@ if($committee == "Admin"){
 			<span class="ss-q-title">Requestor</span>
 			<input type="text" name="requestor" value="<?php echo $_SESSION['s_name'];?>" readonly="true" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Date</span>
 			<span class="ss-q-help">The date the payment was received (mm/dd/yyyy)</span>
 			<input type="text" class="ss-q-short" name="paid_date" maxlength="10" value="<?php echo $_GET["paid_date"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Item</span>
 			<span class="ss-q-help">Please include a specific description of what the payment is for</span>
 			<input type="text" class="ss-q-short" name="item" maxlength="200" value="<?php echo $_GET["item"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Vendor/Group</span>
 			<span class="ss-q-help">If this is for ticket sales (i.e. no specific group), please write ticket sales</span>
 			<input type="text" class="ss-q-short" name="vendor" maxlength="100" value="<?php echo $_GET["vendor"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Amount</span>
 			<span class="ss-q-help">xxxx.xx (no $ or ,)</span>
 			<input type="text" class="ss-q-short" name="cost" maxlength="15" value="<?php echo $_GET["cost"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Payment Type</span>
 			<span class="ss-q-help">How was the payment received</span>
@@ -70,21 +65,20 @@ if($committee == "Admin"){
 				<option>Budget Transfer</option>
 				<?php
 				if($_SESSION['s_auth'] == "Admin"){
-					echo "<option>UA Budget</option>";
+					echo "<option>UA Allocation</option>";
 				}
 				?>
 			</select>
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Main Category</span>
 			<span class="ss-q-help"></span>
 			<select name="main">
 				<?php
-				$sql = "SELECT `item` FROM `budget_item` WHERE 1 AND `committee` = '".$committee."' AND `deleted` = 'no'";
+				$sql = "SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = '".get_committee_id($committee)."' AND `deleted` = 'no'";
 				$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 				if(mysqli_num_rows($result) == 0){
-					die("Either the committee does not exist or it has not been set up correctly. Please contact Andrew at andrewjshults@gmail.com");
+					die("Either the committee does not exist or it has not been set up correctly. Please contact Billy at billyclarke94@gmail.com");
 				}
 				while($row = mysqli_fetch_array($result)){
 					echo "<option>".$row[0]."</option>";
@@ -92,13 +86,11 @@ if($committee == "Admin"){
 				?>
 			</select>
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Sub Category</span>
 			<span class="ss-q-help">i.e. Hospitality, Production, etc.</span>
 			<input type="text" class="ss-q-short" name="sub" id="sub" maxlength="100" onkeydown="return noenter();" value="<?php echo $_GET["sub"]; ?>" />
 		</div>
-		
 		<div class="ss-form-entry">
 			<span class="ss-q-title">Notes</span>
 			<span class="ss-q-help">Maximum of 255 characters</span>
