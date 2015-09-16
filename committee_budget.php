@@ -59,13 +59,15 @@ if($committee == "Admin"){
 		$sub_budgets = "";
 		$total_budget = 0;
 		$total_costs = 0;
-		$sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
+		$sql = 'SELECT `id` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 		while($row = mysqli_fetch_array($result)){
+      $category_id = $row[0];
+      $category = get_category_string($category_id);
 			$item_count++;
 			$budget = 0;
 			$expenses = 0;
-			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''..'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
+			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
         $cost = $row_2[0];
@@ -80,7 +82,7 @@ if($committee == "Admin"){
 					$budget = $budget + $cost;
 				}
 			}
-			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$row[0],'budget_breakdown.php?committee='.$committee.'&main='.$row[0])."</td></tr>";
+			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category,'budget_breakdown.php?committee='.$committee.'&main='.$row[0])."</td></tr>";
 			$total_costs = $total_costs + $expenses;
 			$total_budget = $total_budget + $budget;
 		}
