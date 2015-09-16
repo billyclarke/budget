@@ -3,23 +3,27 @@ require_once("db.php");
 //require_once("check_auth.php");
 require_once("functions.php");
 
-$sql = 'SELECT `committee`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `submitted` FROM `budget` WHERE `id` = '.$_GET["id"].' AND `type` = \'Petty Cash\'  AND `deleted` = \'no\'';
+$pettycash_type_id = get_type_id("Petty Cash");
+
+$sql = 'SELECT `committee_id`, `requestor_id`, `item`, `vendor`, `cost`, `category_id`, `submitted_date` FROM `budget_transactions` WHERE `id` = '.$_GET["id"].' AND `type_id` = \''.$pettycash_type_id.'\'  AND `deleted` = \'no\'';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 while($row = mysqli_fetch_array($result)){
-	$name = $row[1];
-	$committee = $row[0];
-	$vendor = $row[4];
-	$purchase_date = $row[2];
-	$cost = number_format(abs($row[5]), 2, '.', ',');
-	$description = $row[3];
-	$today = $row[7];
-	
-	$sql = 'SELECT `budget_category` FROM `budget_item` WHERE `committee` = \''.$row[0].'\' AND `item` = \''.$row[6].'\' AND `deleted` = \'no\'';
+	$committee_id = $row[0];
+  $committee = get_committee_string($committee_id);
+	$requestor_id = $row[1];
+	$requestor = get_user_string($requestor_id);
+	$item = $row[2];
+	$vendor = $row[3];
+	$cost = number_format(abs($row[4]), 2, '.', ',');
+  $category_id = $row[5];
+	$submitted_date = $row[6];
+
+	$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE `category_id` = \''.$category_id.'\' AND `deleted` = \'no\'';
 	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$budget_category = mysqli_fetch_row($result2);
-	$budget_category = $budget_category[0];
-	
+	$budget_code = mysqli_fetch_row($result2);
+	$budget_code = $budget_code[0];
+
 	$sql = 'SELECT `email` FROM `directors` WHERE `name` =\''.$row[1].'\' AND `deleted` = \'no\'';
 	$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	$email = mysqli_fetch_row($result3);
@@ -158,12 +162,12 @@ font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
   <td width=373 valign=top style='width:279.9pt;border-top:none;border-left:
   solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
   solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $description; ?></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $item; ?></span></p>
   </td>
   <td width=186 valign=top style='width:139.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $budget_category; ?></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $budget_code; ?></span></p>
   </td>
   <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
@@ -236,7 +240,7 @@ style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'>Total $ <?php echo $c
   <td width=265 valign=top style='width:198.9pt;border-top:none;border-left:
   solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;border-right:
   solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:20.0pt'>
-  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $name; ?></span></p>
+  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $requestor; ?></span></p>
   </td>
   <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
@@ -286,7 +290,7 @@ style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'>Total $ <?php echo $c
   <td width=180 valign=top style='width:135.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
   padding:0in 5.4pt 0in 5.4pt;height:20.0pt'>
-  <p class=MsoNormal><?php echo $today; ?></p>
+  <p class=MsoNormal><?php echo $submitted_date; ?></p>
   </td>
  </tr>
 </table>

@@ -3,23 +3,28 @@ require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
 
-$sql = 'SELECT `committee`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `submitted` FROM `budget` WHERE `id` = '.$_GET["id"].' AND `type` = \'ProCard\' AND `deleted` = \'no\'';
+$pcard_type_id = get_type_id("Purchasing Card");
+
+$sql = 'SELECT `committee_id`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `submitted_date` FROM `budget_transactions` WHERE `id` = '.$_GET["id"].' AND `type_id` = \''.$pcard_type_id.'\' AND `deleted` = \'no\'';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 while($row = mysqli_fetch_array($result)){
-	$name = $row[1];
-	$committee = $row[0];
+	$committee_id = $row[0];
+	$committee = $get_committee_string($committee_id);
+	$requestor_id = $row[1];
+	$requestor = $get_user_string($requestor_id);
+	$action_date = $row[2];
+	$item = $row[3];
 	$vendor = $row[4];
-	$purchase_date = $row[2];
 	$cost = number_format(abs($row[5]), 2, '.', ',');
-	$description = $row[3];
-	$today = $row[7];
-	
-	$sql = 'SELECT `budget_category` FROM `budget_item` WHERE `committee` = \''.$row[0].'\' AND `item` = \''.$row[6].'\' AND `deleted` = \'no\'';
+  $category_id = $row[6];
+	$submitted_date = $row[7];
+
+	$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE `category_id` = \''.$category_id.'\' AND `deleted` = \'no\'';
 	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$budget_category = mysqli_fetch_row($result2);
-	$budget_category = $budget_category[0];
-	
+	$budget_code = mysqli_fetch_row($result2);
+	$budget_code = $budget_code[0];
+
 	$sql = 'SELECT `email` FROM `directors` WHERE `committee` LIKE CONVERT(_utf8 \'Admin\' USING latin1) COLLATE latin1_swedish_ci AND `name` LIKE CONVERT(_utf8 \''.$row[1].'\' USING latin1) COLLATE latin1_swedish_ci AND `deleted` = CONVERT(_utf8 \'no\' USING latin1) COLLATE latin1_swedish_ci';
 	$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	$email = mysqli_fetch_row($result3);
@@ -143,7 +148,7 @@ to BACK of this form.</span></p>
   <td width=288 valign=top style='width:3.0in;border-top:none;border-left:solid windowtext 1.5pt;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt;height:26.0pt'>
-  <p class=MsoNormal><?php echo $name;?> </p>
+  <p class=MsoNormal><?php echo $requestor;?> </p>
   </td>
   <td width=221 valign=top style='width:2.3in;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
@@ -153,7 +158,7 @@ to BACK of this form.</span></p>
   <td width=202 valign=top style='width:2.1in;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
   padding:0in 5.4pt 0in 5.4pt;height:26.0pt'>
-  <p class=MsoNormal><?php echo $today;?> </p>
+  <p class=MsoNormal><?php echo $submitted_date;?> </p>
   </td>
  </tr>
 </table>
@@ -201,7 +206,7 @@ to BACK of this form.</span></p>
   <td width=182 valign=top style='width:1.9in;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt;height:20.0pt'>
-  <p class=MsoNormal><?php echo $purchase_date;?> </p>
+  <p class=MsoNormal><?php echo $action_date;?> </p>
   </td>
   <td width=144 valign=top style='width:1.5in;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
@@ -236,14 +241,14 @@ style='font-size:8.0pt;line-height:50%'>&nbsp;</span></p>
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt;height:50.0pt'>
   <p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;</span></p>
-  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $description;?> </span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt'><?php echo $item;?> </span></p>
   </td>
   <td width=296 valign=top style='width:222.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
   padding:0in 5.4pt 0in 5.4pt;height:50.0pt'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-size:14.0pt'><br>
-  <?php echo $budget_category;?> </span></p>
+  <?php echo $budget_code;?> </span></p>
   </td>
  </tr>
 </table>
