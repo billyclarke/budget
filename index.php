@@ -21,7 +21,6 @@ if(!$_GET['auth']){
 		<br />
 		<br />
 		<br />
-    <p>Billy is currently working on the budget software (2015-09-16 3:15PM). Please do not login. </p>
 		<form action="login.php" method="post" target="_top">
 			<input type="hidden" name="comp" value="<?php echo $_GET['comp']; ?>" />
 			<input type="hidden" name="auth" value="<?php echo $_GET['auth']; ?>" />

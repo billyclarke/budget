@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once("db.php");
-die("Billy is currently working on the budget software. Please come back later :)");
 $sql = 'SELECT `id` FROM `budget_users` WHERE 1 AND `name` = \''.$_POST["name"].'\' AND `password` = \''.md5($_POST["password"]).'\' AND `deleted` = \'no\' LIMIT 0, 1';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 if(mysqli_num_rows($result) == 0){
