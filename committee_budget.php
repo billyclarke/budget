@@ -65,17 +65,19 @@ if($committee == "Admin"){
 			$item_count++;
 			$budget = 0;
 			$expenses = 0;
-			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.get_category_id($row[0]).'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
+			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''..'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
-				if($row_2[0] < 0){
-					if($row_2[1] == get_type_id("Internal Budget Transfer")){
-						$budget = $budget + $row_2[0];
+        $cost = $row_2[0];
+        $type_id = $row_2[1];
+				if($cost < 0){
+					if($type_id == get_type_id("Internal Budget Transfer")){
+						$budget = $budget + $cost;
 					}else{
-						$expenses = $expenses + $row_2[0];
+						$expenses = $expenses + $cost;
 					}
 				}else{
-					$budget = $budget + $row_2[0];
+					$budget = $budget + $cost;
 				}
 			}
 			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$row[0],'budget_breakdown.php?committee='.$committee.'&main='.$row[0])."</td></tr>";
