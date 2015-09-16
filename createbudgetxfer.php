@@ -1,9 +1,8 @@
 <?php
-require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
 
-$sql = 'SELECT `committee`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `submitted` FROM `budget` WHERE `id` = '.$_GET["id"].' AND `type` = \'Budget Transfer\' AND `deleted` = \'no\'';
+$sql = 'SELECT `committee_id`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `submitted_date` FROM `budget_transactions` WHERE `id` = '.$_GET["id"].' AND `type_id` = \''.get_type_id("Internal Budget Transfer").'\' AND `deleted` = \'no\'';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 $io1 = "To";
@@ -11,24 +10,28 @@ $io2 = "From";
 $io3 = "Incoming";
 
 while($row = mysqli_fetch_array($result)){
-	$name = $row[1];
-	$committee = $row[0];
-	$vendor = $row[4];
+	$committee_id = $row[0];
+	$committee = get_committee_string($committee_id);
+	$requestor_id = $row[1];
+  $requestor = get_user_string($requestor_id);
 	$purchase_date = $row[2];
-	if($row[5] < 0){
+	$item = $row[3];
+	$vendor = $row[4];
+  $cost = $row[5];
+	if($cost < 0){
 		$io1 = "From";
 		$io2 = "To";
 		$io3 = "Outgoing";
 	}
-	$cost = number_format(abs($row[5]), 2, '.', ',');
-	$description = $row[3];
-	$main = $row[6];
-	$today = $row[7];
-	
-	$sql = 'SELECT `budget_category` FROM `budget_item` WHERE `committee` = \''.$row[0].'\' AND `item` = \''.$row[6].'\' AND `deleted` = \'no\'';
+	$cost = number_format(abs($cost), 2, '.', ',');
+	$category_id = $row[6];
+  $category = get_category_string($category_id);
+	$submitted_date = $row[7];
+
+	$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE `committee_id` = \''.$committee_id.'\' AND `id` = \''.$category_id.'\' AND `deleted` = \'no\'';
 	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$budget_category = mysqli_fetch_row($result2);
-	$budget_category = $budget_category[0];
+	$budget_code = mysqli_fetch_row($result2);
+	$budget_code = $budget_code[0];
 }
 
 header("Expires: 0?");
@@ -89,12 +92,12 @@ style='font-size:16.0pt;font-family:"Arial","sans-serif"'><?php echo $io1; ?></s
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>Budget
-Category: <?php echo $main; ?></span></p>
+Category: <?php echo $category; ?></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>Budget
-Code: <?php echo $budget_category; ?></span></p>
+Code: <?php echo $budget_code; ?></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
 
@@ -163,7 +166,7 @@ style='font-size:16.0pt;font-family:"Arial","sans-serif"'>Authorization</span></
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>Printed
-Name: <?php echo $name; ?></span></p>
+Name: <?php echo $requestor; ?></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
 
