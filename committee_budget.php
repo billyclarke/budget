@@ -82,7 +82,7 @@ if($committee == "Admin"){
 					$budget = $budget + $cost;
 				}
 			}
-			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category,'budget_breakdown.php?committee='.$committee.'&main='.$row[0])."</td></tr>";
+			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category,'budget_breakdown.php?committee='.$committee.'&main='.$category)."</td></tr>";
 			$total_costs = $total_costs + $expenses;
 			$total_budget = $total_budget + $budget;
 		}
