@@ -1,7 +1,8 @@
 <?php
 require_once("check_auth.php");
-require_once("db.php");
+require_once("functions.php");
 $committee = $_GET['committee'];
+$committee_id = get_committee_id($committee);
 require_once("functions.php");
 if($committee == "Admin"){
 	die("The Admin usergroup does not have an associated budget.");
@@ -58,17 +59,17 @@ if($committee == "Admin"){
 		$sub_budgets = "";
 		$total_budget = 0;
 		$total_costs = 0;
-		$sql = 'SELECT `item` FROM `budget_item` WHERE 1 AND `committee` = \''.$committee.'\' AND `deleted` = \'no\' ORDER BY `item` ASC';
+		$sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 		while($row = mysqli_fetch_array($result)){
 			$item_count++;
 			$budget = 0;
 			$expenses = 0;
-			$sql = 'SELECT `cost`,`type` FROM `budget` WHERE 1 AND `committee` = \''.$committee.'\' AND `main` = \''.$row[0].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.get_category_id($row[0]).'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
 				if($row_2[0] < 0){
-					if($row_2[1] == "Internal Budget Transfer"){
+					if($row_2[1] == get_type_id("Internal Budget Transfer")){
 						$budget = $budget + $row_2[0];
 					}else{
 						$expenses = $expenses + $row_2[0];
@@ -82,7 +83,7 @@ if($committee == "Admin"){
 			$total_budget = $total_budget + $budget;
 		}
 		echo "<tr><td height='100px'>".draw_expense($total_costs, $total_budget, $committee." Total Budget",'')."</td>";
-		$sql = 'SELECT `type`,`date`,`item`,`vendor`,`cost`,`main`,`sub` FROM `budget` WHERE 1 AND `committee` = \''.$committee.'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\' ORDER BY `date` DESC LIMIT 0, 15';
+		$sql = 'SELECT `type_id`,`action_date`,`item`,`vendor`,`cost`,`category_id`,`subcategory` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\' ORDER BY `action_date` DESC LIMIT 0, 15';
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 		echo "<td rowspan='".$item_count."' valign='top'>";
 		?>
@@ -101,27 +102,36 @@ if($committee == "Admin"){
 			</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)){
+      $type_id = $row[0];
+      $type = get_type_string($type_id);
+      $action_date = $row[1];
+      $item = $row[2];
+      $vendor = $row[3];
+      $cost = $row[4];
+      $category_id = $row[5];
+      $category = get_category_string($category_id);
+      $subcategory = $row[6];
 			echo "
 			<tr>
-				<td>".stripslashes(ucwords($row[0]))."&nbsp;</td>
-				<td>".stripslashes(ucwords($row[1]))."&nbsp;</td>
-				<td>".stripslashes(ucwords($row[2]))."&nbsp;</td>
-				<td>".stripslashes(ucwords($row[3]))."&nbsp;</td>";
-			if($row[4] < 0){
+				<td>".stripslashes(ucwords($type))."&nbsp;</td>
+				<td>".stripslashes(ucwords($action_date))."&nbsp;</td>
+				<td>".stripslashes(ucwords($item))."&nbsp;</td>
+				<td>".stripslashes(ucwords($vendor))."&nbsp;</td>";
+
+			if($cost < 0){
 				echo "
-				<td>$".number_format(abs($row[4]),2)."</td>
+				<td>$".number_format(abs($cost),2)."</td>
 				<td>&nbsp;</td>
 				";
 			}else{
 				echo "
 				<td>&nbsp;</td>
-				<td>$".number_format(abs($row[4]),2)."</td>
+				<td>$".number_format(abs($cost),2)."</td>
 				";
 			}
-				
 			echo "
-				<td>".stripslashes(ucwords($row[5]))."&nbsp;</td>
-				<td>".stripslashes(ucwords($row[6]))."&nbsp;</td>
+				<td>".stripslashes(ucwords($category))."&nbsp;</td>
+				<td>".stripslashes(ucwords($subcategory))."&nbsp;</td>
 			</tr>
 			";
 		}

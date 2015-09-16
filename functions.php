@@ -79,6 +79,7 @@ function get_type_string($type_id){
 }
 
 function draw_expense($spent, $total ,$item, $link, $override = 'no'){
+  echo '<p>Spent: '.$spent.' total: '.$total.' item: '.$item.'</p>';
 	//Config
 	$height = 20;
 	$mult = 2.4;

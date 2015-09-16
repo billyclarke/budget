@@ -3,6 +3,7 @@ require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
 $committee = $_GET['committee'];
+$committee_id = get_committee_id($committee);
 ?>
 <html>
 	<head>
@@ -39,19 +40,20 @@ $committee = $_GET['committee'];
 		<?php
 			$budget = 0;
 			$expenses = 0;
-      $committee_id = get_committee_id($committee);
       $category_id = get_category_id($_GET["main"],$committee_id);
 			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
-				if($row_2[0] < 0){
-					if($row_2[1] == get_type_id("Internal Budget Transfer")){
-						$budget = $budget + $row_2[0];
+        $cost = $row_2[0];
+        $type_id = $row_2[1];
+				if($cost < 0){
+					if($type_id == get_type_id("Internal Budget Transfer")){
+						$budget = $budget + $cost;
 					}else{
-						$expenses = $expenses + $row_2[0];
+						$expenses = $expenses + $cost;
 					}
 				}else{
-					$budget = $budget + $row_2[0];
+					$budget = $budget + $cost;
 				}
 			}
 			$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE 1 AND `id` = \''.$category_id.'\' AND `deleted` = \'no\'';
@@ -135,19 +137,19 @@ $committee = $_GET['committee'];
 							$pc1 = "";
 							$pc2 = "";
 							if($type_id == get_type_id("Purchasing Card")){
-								$pc1 = "<a href='createpcard.php?id=".$row[6]."'>";
+								$pc1 = "<a href='createpcard.php?id=".$id."'>";
 								$pc2 = "</a>";
 							}
 							if($type_id == get_type_id("Budget Transfer")){
-								$pc1 = "<a href='createbudgetxfer.php?id=".$row[6]."'>";
+								$pc1 = "<a href='createbudgetxfer.php?id=".$id."'>";
 								$pc2 = "</a>";
 							}
 							if($type_id == get_type_id("Reimbursement")){
-								$pc1 = "<a href='createreimbursement.php?id=".$row[6]."'>";
+								$pc1 = "<a href='createreimbursement.php?id=".$id."'>";
 								$pc2 = "</a>";
 							}
 							if($type_id == get_type_id("Petty Cash")){
-								$pc1 = "<a href='createpettycash.php?id=".$row[6]."'>";
+								$pc1 = "<a href='createpettycash.php?id=".$id."'>";
 								$pc2 = "</a>";
 							}
 								$temp_out .= "<td>".$requestor."&nbsp;</td>
@@ -166,7 +168,6 @@ $committee = $_GET['committee'];
 								<td>$".number_format(abs($cost),2)."</td>
 								";
 							}
-								
 							$temp_out .= "<td>".stripslashes(ucwords($note))."&nbsp;</td></tr>";
 						}
 						if($budget == 0){
@@ -188,7 +189,7 @@ $committee = $_GET['committee'];
 							}else{
 								$pdebit = 0;
 							}
-							if($sub[$j] == ""){	
+							if($sub[$j] == ""){
 								echo "<tr><td colspan='".$cspan."' bgcolor='DodgerBlue'><b>No Sub Catagory</b> - Credits: $".number_format(abs($credits),2)." (".$pcredit."%) &nbsp; Debits: $".number_format(abs($debits),2)." (".$pdebit."%)</td></tr>".$temp_out;
 							}else{
 								echo "<tr><td colspan='".$cspan."' bgcolor='DodgerBlue'><b>".$sub[$j]."</b> - Credits: $".number_format(abs($credits),2)." (".$pcredit."%) &nbsp; Debits: $".number_format(abs($debits),2)." (".$pdebit."%)</td></tr>".$temp_out;
