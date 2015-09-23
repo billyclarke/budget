@@ -17,7 +17,7 @@ function get_category_id($category_name, $committee_id){
 }
 
 function get_category_string($category_id){
-  $sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `id` = \''.$category_id.'\' AND `deleted` = \'no\' LIMIT 1';
+  $sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `id` = \''.$category_id.'\' LIMIT 1';
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   $row = mysqli_fetch_array($result);
   return $row[0];
@@ -48,7 +48,7 @@ function get_user_id($user_name){
 }
 
 function get_user_string($user_id){
-  $sql = 'SELECT `name` FROM `directors` WHERE 1 AND `id` = \''.$user_id.'\' AND `deleted` = \'no\' LIMIT 1';
+  $sql = 'SELECT `name` FROM `directors` WHERE 1 AND `id` = \''.$user_id.'\' LIMIT 1';
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   $row = mysqli_fetch_array($result);
   return $row[0];
