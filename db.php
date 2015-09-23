@@ -61,6 +61,13 @@ function get_type_id($type_string){
   $sql = 'SELECT `id` FROM `budget_transaction_types` WHERE 1 AND `name` = \''.$type_string.'\' LIMIT 1';
 }
 
+function get_type_string($type_id){
+  $sql = 'SELECT `name` FROM `budget_transaction_types` WHERE 1 AND `id` = \''.$type_id.'\' LIMIT 1';
+  $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
+  $row = mysqli_fetch_array($result);
+  return $row[0];
+}
+
 function get_committees(){
 	$sql = 'SELECT `committee` FROM `budget_item` WHERE 1 AND `deleted` = \'no\' ORDER BY `committee` ASC';
 	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
