@@ -22,10 +22,7 @@ while($row = mysqli_fetch_array($result)){
 	$submitted_date = $row[7];
   $budget_code = get_budget_code($category_id);
 
-	$sql = 'SELECT `email` FROM `directors` WHERE `name` =\''.$row[1].'\' AND `deleted` = \'no\'';
-	$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$email = mysqli_fetch_row($result3);
-	$email = $email[0];
+	$email = get_user_email($requestor_id);
 }
 
 header("Expires: 0?");
