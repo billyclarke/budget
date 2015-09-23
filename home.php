@@ -14,10 +14,10 @@ body  {font-family: arial, helvetica, geneva, sans-serif; font-size: small}
 </style>
 </head>
 <frameset rows="62,*">
-	<frame src="https://www.specevents.net/budget2/spec_logo.php?auth=<?php echo $_SESSION['s_auth']; ?>" frameborder=0>
+	<frame src="https://www.specevents.net/budget/spec_logo.php?auth=<?php echo $_SESSION['s_auth']; ?>" frameborder=0>
 	<frameset cols="140,*">
-		<frame src="https://www.specevents.net/budget2/nav.php" frameborder=0>
-		<frame src="https://www.specevents.net/budget2/committee_budget.php?committee=<?php echo $_SESSION['s_auth']; ?>" name="home" frameborder=0>
+		<frame src="https://www.specevents.net/budget/nav.php" frameborder=0>
+		<frame src="https://www.specevents.net/budget/committee_budget.php?committee=<?php echo $_SESSION['s_auth']; ?>" name="home" frameborder=0>
 	</frameset>
 </frameset>
 </html>
