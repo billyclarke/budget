@@ -72,7 +72,7 @@ $committee_id = get_committee_id($_POST['committee']);
 $requestor_id = get_user_id($_POST['requestor']);
 $category_id = get_category_id($_POST['main'], $committee_id);
 $type_id = get_type_id($_POST['expense']);
-$sql = 'INSERT INTO `budget` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`, `note`) VALUES (\'\', \''.$committee_id.'\', \''.$today.'\', \''.$requestor_id.'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \''.$_POST['cost'].'\', \''.$category_id.'\', \''.$_POST['sub'].'\', \''.$type_id.'\', \'no\',\''.$_POST['note'].'\');';
+$sql = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`, `note`) VALUES (\'\', \''.$committee_id.'\', \''.$today.'\', \''.$requestor_id.'\', \''.$date.'\', \''.$_POST['item'].'\', \''.$_POST['vendor'].'\', \''.$_POST['cost'].'\', \''.$category_id.'\', \''.$_POST['sub'].'\', \''.$type_id.'\', \'no\',\''.$_POST['note'].'\');';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 ?>
 <html>
