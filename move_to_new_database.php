@@ -1,4 +1,5 @@
 <?php
+require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
 if($_SESSION['s_auth'] != "Admin"){
@@ -13,8 +14,40 @@ if($_SESSION['s_auth'] != "Admin"){
 	<body>
 		<table>
     <?php
+    $sql = 'SELECT `id`,`committee`,`submitted`,`requestor`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`type`,`treasurer_approved`,`advisor_approved`,`deleted`,`note` FROM `budget` WHERE `id` > \'6264\'  ORDER BY `id`';
+    $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
+    while($row = mysqli_fetch_array($result)){
+      $id = $row[0];
+      $committee = $row[1];
+      $committee_id = get_committee_id($committee);
+      $submitted_date = $row[2];
+      $requestor = $row[3];
+      $requestor_id = get_user_id($requestor);
+      $action_date = $row[4];
+      $item = $row[5];
+      $vendor = $row[6];
+      $cost = $row[7];
+      $main = $row[8];
+      $category_id = get_category_id($main, $committee_id);
+      $subcategory = $row[9];
+      $type = $row[10];
+      $type_id = get_type_id($type);
+      $treasurer_approved = $row[11];
+      $advisor_approved = $row[12];
+      $deleted = $row[13];
+      $note = $row[14];
+      echo "
+      <tr>
+        <td>".stripslashes(ucwords($id))."&nbsp;</td>
+        <td>".stripslashes(ucwords($committee))."&nbsp;</td>
+        <td>".stripslashes(ucwords($submitted))."&nbsp;</td>
+      </tr>";
+      $sql2 = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `requestor_id`, `submitted_date`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`, `deleted`, `note`) VALUES (\''.$id.'\',\''.$committee_id.'\',\''.$requestor_id.'\',\''.$submitted_date.'\',\''.$action_date.'\',\''.$item.'\',\''.$vendor.'\',\''.$cost.'\',\''.$category_id.'\',\''.$subcategory.'\',\''.$type_id.'\',\''.$treasurer_approved.'\',\''.$deleted.'\',\''.$note.'\');';
+
+    }
     ?>
     </table>
+
 <!--
       $newsql = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `requestor_id`, `submitted_date`, `action_date`, `execution_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`, `deleted`, `note`) VALUES (\''.$id.'\',\''.$committee_id.'\',\''.$requestor_id.'\',\''.$submitted_date.'\',\''.$action_date.'\',\''.$execution_date.'\',\''.$item.'\',\''.$vendor.'\',\''.$cost.'\',\''.$category_id.'\',\''.$subcategory.'\',\''.$type_id.'\',\''.$treasurer_approved.'\',\''.$deleted.'\',\''.$note.'\');';
       echo "
