@@ -1,3 +1,4 @@
+*.swp
 dbpass.php
 backupdb/
 php_errorlog
