@@ -2,6 +2,7 @@
 require_once("check_auth.php");
 require_once("db.php");
 require_once("functions.php");
+require_once("set_dates.php");
 if($_SESSION['s_auth'] != "Admin"){
 	die("You are not authorized to view this page with your credentials.");
 }
@@ -14,23 +15,27 @@ $j = 1;
 for($i = 0; $i < sizeof($committees); $i++){
 	$budget = 0;
 	$expenses = 0;
-	$sql = 'SELECT `cost`,`type` FROM `budget` WHERE 1 AND `committee` = \''.$committees[$i].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+  $committee = $committees[$i];
+  $committee_id = get_committee_id($committee);
+	$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 	$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	while($row_2 = mysqli_fetch_array($result_2)){
-		if($row_2[0] < 0){
-			if($row_2[1] == "Internal Budget Transfer"){
-				$budget = $budget + $row_2[0];
+    $cost = $row_2[0];
+    $type_id = $row_2[1];
+		if($cost < 0){
+			if($type_id == get_type_id("Internal Budget Transfer")){
+				$budget = $budget + $cost;
 			}else{
-				$expenses = $expenses + $row_2[0];
+				$expenses = $expenses + $cost;
 			}
 		}else{
-			$budget = $budget + $row_2[0];
+			$budget = $budget + $cost;
 		}
 	}
 	if(($j/2) != floor($j/2)){
 		$sub_budgets = $sub_budgets."<tr>";
 	}
-	$sub_budgets = $sub_budgets."<td>".draw_expense($expenses,$budget,$committees[$i],'committee_budget.php?committee='.$committees[$i],'yes')."</td>";
+	$sub_budgets = $sub_budgets."<td>".draw_expense($expenses,$budget,$committee,'committee_budget.php?committee='.$committee,'yes')."</td>";
 	if(($j/2) == floor($j/2)){
 		$sub_budgets = $sub_budgets."</tr>";
 	}
@@ -68,7 +73,7 @@ for($i = 0; $i < sizeof($committees); $i++){
 				<td valign="top">
 					<table>
 						<?php
-							echo "<tr><td>".draw_expense($total_costs, $total_budget, $committee." Total Budget",'')."</td>";
+							echo "<tr><td>".draw_expense($total_costs, $total_budget,"SPEC Total Budget",'')."</td>";
 							echo $sub_budgets;
 						?>
 					</table>
@@ -90,7 +95,7 @@ for($i = 0; $i < sizeof($committees); $i++){
 									}else{
 										echo "<a href='backupDB.php' onclick='parent.nav.document.getElementById(\"committee\").value =\"Backup\"'>Backup has not been performed today.</a>";
 									}
-								?>	
+								?>
 								</td>
 							</tr>
 						</table>
@@ -117,7 +122,7 @@ for($i = 0; $i < sizeof($committees); $i++){
 						}
 					?>
 					<?php
-						$sql = 'SELECT `id`,`committee`,`requestor`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`type` FROM `budget` WHERE 1 AND `treasurer_approved` = \'no\' AND `deleted` = \'no\' ORDER BY `id` DESC LIMIT 0, 10';
+						$sql = 'SELECT `id`,`committee_id`,`requestor_id`,`action_date`,`item`,`vendor`,`cost`,`category_id`,`subcategory`,`type_id` FROM `budget_transactions` WHERE 1 AND `treasurer_approved` = \'no\' AND `deleted` = \'no\' ORDER BY `id` DESC LIMIT 0, 10';
 						$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 						if(mysqli_num_rows($result) > 0){
 							$check++;
@@ -129,11 +134,25 @@ for($i = 0; $i < sizeof($committees); $i++){
 									</tr>
 					<?php
 							while($row = mysqli_fetch_array($result)){
+                $id = $row[0];
+                $committee_id = $row[1];
+                $committee = get_committee_string($committee_id);
+                $requestor_id = $row[2];
+                $requestor = get_user_string($requestor_id);
+                $action_date = $row[3];
+                $item = $row[4];
+                $vendor = $row[5];
+                $cost = $row[6];
+                $category_id = $row[7];
+                $category = get_category_string($category_id);
+                $subcategory = $row[8];
+                $type_id = $row[9];
+                $type = get_type_string($type_id);
 								$neg = "";
-								if($row[6] < 0){
+								if($cost < 0){
 									$neg = "-";
 								}
-								echo "<tr><td>[<a href='approve.php?id=".$row[0]."'>Approve</a>]</td><td>".$row[3]."</td><td>".$row[1]." (".$row[7].")</td><td>".$neg."$".number_format(abs($row[6]),2)."</td><td>".$row[5]." - ".$row[4]." (".$row[9].")</td></tr>";
+								echo "<tr><td>[<a href='approve.php?id=".$id."'>Approve</a>]</td><td>".$action_date."</td><td>".$committee." (".$category.")</td><td>".$neg."$".number_format(abs($cost),2)."</td><td>".$vendor." - ".$item." (".$type.")</td></tr>";
 							}
 							echo "</table></div>";
 						}
@@ -156,29 +175,39 @@ for($i = 0; $i < sizeof($committees); $i++){
 								<td align="center"><b>Main Category</b></td>
 							</tr>
 							<?php
-							$sql = 'SELECT `type`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`committee` FROM `budget` WHERE 1 AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\' ORDER BY `id` DESC LIMIT 0, '.$items;
+							$sql = 'SELECT `type_id`,`action_date`,`item`,`vendor`,`cost`,`category_id`,`subcategory`,`committee_id` FROM `budget_transactions` WHERE 1 AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\' ORDER BY `id` DESC LIMIT 0, '.$items;
 							$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 							while($row = mysqli_fetch_array($result)){
+                $type_id = $row[0];
+                $type = get_type_string($type);
+                $action_date = $row[1];
+                $item = $row[2];
+                $vendor = $row[3];
+                $cost = $row[4];
+                $category_id = $row[5];
+                $category = get_category_string($category_id);
+                $subcategory = $row[6];
+                $committee_id = $row[7];
+                $committee = get_committee_string($committee_id);
 								echo "
 								<tr>
-									<td>".stripslashes(ucwords($row[7]))."&nbsp;</td>
-									<td>".stripslashes(ucwords($row[0]))."&nbsp;</td>
-									<td>".stripslashes(ucwords($row[1]))."&nbsp;</td>
-									<td>".stripslashes(ucwords($row[2]))."&nbsp;</td>";
-								if($row[4] < 0){
+									<td>".stripslashes(ucwords($committee))."&nbsp;</td>
+									<td>".stripslashes(ucwords($type))."&nbsp;</td>
+									<td>".stripslashes(ucwords($action_date))."&nbsp;</td>
+									<td>".stripslashes(ucwords($item))."&nbsp;</td>";
+								if($cost < 0){
 									echo "
-									<td>$".number_format(abs($row[4]),2)."</td>
+									<td>$".number_format(abs($cost),2)."</td>
 									<td>&nbsp;</td>
 									";
 								}else{
 									echo "
 									<td>&nbsp;</td>
-									<td>$".number_format(abs($row[4]),2)."</td>
+									<td>$".number_format(abs($cost),2)."</td>
 									";
 								}
-									
 								echo "
-									<td>".stripslashes(ucwords($row[5]))."&nbsp;</td>
+									<td>".stripslashes(ucwords($category))."&nbsp;</td>
 								</tr>
 								";
 							}
@@ -190,5 +219,5 @@ for($i = 0; $i < sizeof($committees); $i++){
 		</table>
 		<p></p>
 		<?php require_once("conf.php"); ?>
-	</body> 
-</html>          
+	</body>
+</html>

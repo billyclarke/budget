@@ -3,23 +3,25 @@ require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
 
-$sql = 'SELECT `committee`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `submitted` FROM `budget` WHERE `id` = '.$_GET["id"].' AND `type` = \'Reimbursement\'  AND `deleted` = \'no\'';
+$reimburementTypeId = get_type_id("Reimbursement");
+$sql = 'SELECT `committee_id`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `submitted_date` FROM `budget_transactions` WHERE `id` = '.$_GET["id"].' AND `type_id` = \''.$reimbursementTypeId.'\'  AND `deleted` = \'no\'';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 while($row = mysqli_fetch_array($result)){
-	$name = $row[1];
-	$committee = $row[0];
-	$vendor = $row[4];
+	$committee_id = $row[0];
+  $committee = get_committee_string($committee_id);
+	$requestor_id = $row[1];
+  $requestor = get_user_string($requestor_id);
 	$purchase_date = $row[2];
-	$cost = number_format(abs($row[5]), 2, '.', ',');
 	$description = $row[3];
-	$today = $row[7];
-	
-	$sql = 'SELECT `budget_category` FROM `budget_item` WHERE `committee` = \''.$row[0].'\' AND `item` = \''.$row[6].'\' AND `deleted` = \'no\'';
-	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$budget_category = mysqli_fetch_row($result2);
-	$budget_category = $budget_category[0];
-	
+	$vendor = $row[4];
+	$cost = $row[5];
+  $cost_formatted = number_format(abs($cost), 2, '.', ',');
+  $category_id = $row[6];
+  $category = get_category_string($category_id);
+	$submitted_date = $row[7];
+  $budget_code = get_budget_code($category_id);
+
 	$sql = 'SELECT `email` FROM `directors` WHERE `name` =\''.$row[1].'\' AND `deleted` = \'no\'';
 	$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	$email = mysqli_fetch_row($result3);
@@ -244,12 +246,12 @@ style='font-family:"Tahoma","sans-serif"'>Review GAPSA guidelines.</span></p>
   <td width=391 valign=top style='width:293.4pt;border-top:none;border-left:
   solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
   solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'><?php echo $description; ?></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'><?php echo $item; ?></span></p>
   </td>
   <td width=198 valign=top style='width:148.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'><?php echo $budget_category; ?></span></p>
+  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"Tahoma","sans-serif"'><?php echo $budget_code; ?></span></p>
   </td>
   <td width=102 valign=top style='width:76.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
@@ -339,7 +341,7 @@ $ <?php echo $cost; ?></span></b></p>
   <td width=288 valign=top style='width:3.0in;border-top:none;border-left:solid windowtext 1.5pt;
   border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.4pt 0in 5.4pt;height:20.0pt'>
-  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $name; ?></span></p>
+  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $requestor; ?></span></p>
   </td>
   <td width=199 valign=top style='width:149.4pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
@@ -389,7 +391,7 @@ $ <?php echo $cost; ?></span></b></p>
   <td width=158 valign=top style='width:1.65in;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
   padding:0in 5.4pt 0in 5.4pt;height:20.0pt'>
-  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $today; ?></span></p>
+  <p class=MsoNormal><span style='font-family:"Tahoma","sans-serif"'><?php echo $submitted_date; ?></span></p>
   </td>
  </tr>
 </table>

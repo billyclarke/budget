@@ -51,18 +51,22 @@ if($_SESSION['s_auth'] != "Admin"){
 		</form>
 		<?php
 			}elseif(!$_POST['from_sub']){
+        $from_committee = $_POST['from_committee'];
+        $from_committee_id = get_committee_id($from_committee);
+        $to_committee = $_POST['to_committee'];
+        $to_committee_id = get_committee_id($to_committee);
 		?>
 				<form action="internal_transfer.php" method="POST">
-					<input type="hidden" name="from_committee" value="<?php echo $_POST['from_committee']; ?>" />
-					<input type="hidden" name="to_committee" value="<?php echo $_POST['to_committee']; ?>" />
+					<input type="hidden" name="from_committee" value="<?php echo ; ?>" />
+					<input type="hidden" name="to_committee" value="<?php echo $to_committee; ?>" />
 					<table>
 						<tr>
 							<td>From:</td>
-							<td><?php echo $_POST['from_committee']; ?></td>
+							<td><?php echo $from_committee; ?></td>
 							<td>
 								<select name="from_sub">
 								<?php
-									$sql = 'SELECT `item` FROM `budget_item` WHERE 1 AND `committee` = \''.$_POST['from_committee'].'\' AND `deleted` = \'no\' ORDER BY `item` ASC LIMIT 0, 30';
+									$sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$from_committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC LIMIT 0, 30';
 									$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 									while($row = mysqli_fetch_array($result)){
 										echo "<option>".$row[0]."</option>";
@@ -73,17 +77,17 @@ if($_SESSION['s_auth'] != "Admin"){
 						</tr>
 						<tr>
 							<td>To:</td>
-							<td><?php echo $_POST['to_committee']; ?></td>
+							<td><?php echo $to_committee; ?></td>
 							<td>
 								<select name="to_sub">
 								<?php
-									$sql = 'SELECT `item` FROM `budget_item` WHERE 1 AND `committee` = \''.$_POST['to_committee'].'\' AND `deleted` = \'no\' ORDER BY `item` ASC LIMIT 0, 30';
+									$sql = 'SELECT `name` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$to_committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC LIMIT 0, 30';
 									$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 									while($row = mysqli_fetch_array($result)){
 										echo "<option>".$row[0]."</option>";
 									}
 								?>
-								</select>		
+								</select>
 							</td>
 						</tr>
 						<tr>
@@ -95,10 +99,14 @@ if($_SESSION['s_auth'] != "Admin"){
 				</form>
 				<?php
 					}elseif(!$_POST['amount']){
-						if($_POST['from_committee'] == $_POST['to_committee'] && $_POST['from_sub'] == $_POST['to_sub']){
+						if($from_committee == $to_committee && $_POST['from_sub'] == $_POST['to_sub']){
 							die("You cannot transfer to and from the same budget item.");
 						}
-						$sql = 'SELECT SUM(`cost`) FROM `budget` WHERE 1 AND `committee` = \''.$_POST['from_committee'].'\' AND `main` = \''.$_POST['from_sub'].'\' AND `deleted` = \'no\'';
+            $from_category = $_POST['from_sub'];
+            $from_category_id = get_category_id($from_category);
+            $to_category = $_POST['to_sub'];
+            $to_category_id = get_category_id($to_category);
+            $sql = 'SELECT SUM(`cost`) FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$from_committee_id.'\' AND `category_id` = \''.$from_category_id.'\' AND `deleted` = \'no\'';
 						$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 						$row =  mysqli_fetch_array($result);
 				?>
@@ -115,12 +123,12 @@ if($_SESSION['s_auth'] != "Admin"){
 							}
 						</script>
 						<form action="internal_transfer.php" method="POST" onsubmit="return checkForm();">
-							<input type="hidden" name="from_committee" value="<?php echo $_POST['from_committee']; ?>" />
-							<input type="hidden" name="to_committee" value="<?php echo $_POST['to_committee']; ?>" />
+							<input type="hidden" name="from_committee" value="<?php echo $from_committee; ?>" />
+							<input type="hidden" name="to_committee" value="<?php echo $to_committee; ?>" />
 							<input type="hidden" name="from_sub" value="<?php echo $_POST['from_sub']; ?>" />
 							<input type="hidden" name="to_sub" value="<?php echo $_POST['to_sub']; ?>" />
 							<input type="hidden" name="max" value="<?php echo $row[0]; ?>" />
-							Transfer $<input type="text" name="amount" id="amount" value="0.00" /> (max of $<?php echo $row[0]; ?>) from <?php echo $_POST['from_sub']; ?> (<?php echo $_POST['from_committee']; ?>) to <?php echo $_POST['to_sub']; ?> (<?php echo $_POST['to_committee']; ?>)<br />
+							Transfer $<input type="text" name="amount" id="amount" value="0.00" /> (max of $<?php echo $row[0]; ?>) from <?php echo $_POST['from_sub']; ?> (<?php echo $from_committee; ?>) to <?php echo $_POST['to_sub']; ?> (<?php echo $to_committee; ?>)<br />
 							<input type="submit" value="Submit" />
 						</form>
 						<?php
@@ -129,20 +137,20 @@ if($_SESSION['s_auth'] != "Admin"){
 							die("Transfer amount exceeds the maximum.");
 						}
 						$today = date("Y-m-d");
-						$transfer = "Transfer to ".$_POST['to_committee'];
-						$sql = 'INSERT INTO `budget` (`id`, `committee`, `submitted`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `sub`, `type`, `treasurer_approved`, `advisor_approved`) VALUES (\'\', \''.$_POST['from_committee'].'\', \''.$today.'\', \'Treasurer\', \''.$today.'\', \''.$transfer.'\', \'\', \'-'.$_POST['amount'].'\', \''.$_POST['from_sub'].'\', \'\', \'Internal Budget Transfer\', \'no\', \'no\');';
+						$transfer = "Transfer to ".$to_committee;
+						$sql = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`) VALUES (\'\', \''.$from_committee_id.'\', \''.$today.'\', \''.get_user_id("Treasurer").'\', \''.$today.'\', \''.$transfer.'\', \'\', \'-'.$_POST['amount'].'\', \''.$from_category_id.'\', \'\', \''.get_type_id("Internal Budget Transfer").'\', \'no\');';
 						$result1 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 						$first_id = ((is_null($___mysqli_res = mysqli_insert_id($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
-						
-						$transfer = "Transfer from ".$_POST['from_committee'];
-						$sql = 'INSERT INTO `budget` (`id`, `committee`, `submitted`, `requestor`, `date`, `item`, `vendor`, `cost`, `main`, `sub`, `type`, `treasurer_approved`, `advisor_approved`) VALUES (\'\', \''.$_POST['to_committee'].'\', \''.$today.'\', \'Treasurer\', \''.$today.'\', \''.$transfer.'\', \''.$first_id.'\', \''.$_POST['amount'].'\', \''.$_POST['to_sub'].'\', \'\', \'Internal Budget Transfer\', \'no\', \'no\');';
+
+						$transfer = "Transfer from ".$from_committee;
+						$sql = 'INSERT INTO `budget_transactions` (`id`, `committee_id`, `submitted_date`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `subcategory`, `type_id`, `treasurer_approved`) VALUES (\'\', \''.$to_committee_id.'\', \''.$today.'\', \''.get_user_id("Treasurer").'\', \''.$today.'\', \''.$transfer.'\', \''.$first_id.'\', \'-'.$_POST['amount'].'\', \''.$to_category_id.'\', \'\', \''.get_type_id("Internal Budget Transfer").'\', \'no\');';
 						$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 						$second_id = ((is_null($___mysqli_res = mysqli_insert_id($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
-						
-						$sql = "UPDATE budget SET `vendor` = '".$second_id."' WHERE `id` = '".$first_id."'";
+
+						$sql = "UPDATE budget_transactions SET `vendor` = '".$second_id."' WHERE `id` = '".$first_id."'";
 						$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-						
-						echo "$".$_POST['amount']." was moved from ".$_POST['from_committee']." (".$_POST['from_sub'].") to ".$_POST['to_committee']." (".$_POST['to_sub'].")<br />";
+
+						echo "$".$_POST['amount']." was moved from ".$from_committee." (".$_POST['from_sub'].") to ".$to_committee." (".$_POST['to_sub'].")<br />";
 						echo "<a href='treasurer.php'>Click to continue</a>";
 					}
 				?>

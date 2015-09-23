@@ -5,7 +5,9 @@ if($_SESSION['s_auth'] != "Admin"){
 	die("You are not authorized to view this page with your credentials.");
 }
 if(!$_GET['id']){
-$sql = 'SELECT `id`,`name` FROM `directors` WHERE 1 AND `committee` = \''.$_GET["committee"].'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
+$committee = $_GET["committee"];
+$committee_id = get_committee_id($committee);
+$sql = 'SELECT `id`,`name` FROM `budget_users` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 ?>
 <html>

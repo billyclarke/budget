@@ -4,7 +4,7 @@ if(!isset($_GET['committee'])){
 	die("No committee selected");
 }
 require_once("db.php");
-$sql = 'SELECT `submitted`,`requestor`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`type`,`treasurer_approved`,`advisor_approved` FROM `budget` WHERE 1 AND `committee` = \''.$_GET['committee'].'\' ORDER BY `date` ASC LIMIT 0, 30';
+$sql = 'SELECT `submitted`,`requestor`,`date`,`item`,`vendor`,`cost`,`main`,`sub`,`type`,`treasurer_approved`,`advisor_approved` FROM `budget` WHERE 1 AND `committee` = \''.$_GET['committee'].'\' ORDER BY `date` DESC LIMIT 0, 30';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 ?>
 <html>

@@ -2,6 +2,7 @@
 require_once("check_auth.php");
 require_once("db.php");
 require_once("functions.php");
+require_once("set_dates.php");
 
 $committees = get_committees();
 
@@ -12,17 +13,21 @@ $j = 1;
 for($i = 0; $i < sizeof($committees); $i++){
 	$budget = 0;
 	$expenses = 0;
-	$sql = 'SELECT `cost`,`type` FROM `budget` WHERE 1 AND `committee` = \''.$committees[$i].'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+  $committee = $committees[$i];
+  $committee_id = get_committee_id($committee);
+	$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
 	$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	while($row_2 = mysqli_fetch_array($result_2)){
-		if($row_2[0] < 0){
-			if($row_2[1] == "Internal Budget Transfer"){
-				$budget = $budget + $row_2[0];
+    $cost = $cost;
+    $type_id = $row_2[1];
+		if($cost < 0){
+			if($type_id == get_type_id("Internal Budget Transfer")){
+				$budget = $budget + $cost;
 			}else{
-				$expenses = $expenses + $row_2[0];
+				$expenses = $expenses + $cost;
 			}
 		}else{
-			$budget = $budget + $row_2[0];
+			$budget = $budget + $cost;
 		}
 	}
 	if(($j/2) != floor($j/2)){

@@ -4,10 +4,7 @@ if($_GET['destroy'] == "yes"){
 	session_destroy();
 	die("You have been logged out.");
 }
-require_once("functions.php");
-if($_GET['comp'] != "SPEC_OSL"){
-	die("Not authorized - This application can only be used from computers inside of the SPEC office.");
-}
+require_once("db.php");
 if(!$_GET['auth']){
 	die("No committee specified.");
 }

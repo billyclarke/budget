@@ -7,7 +7,9 @@ if($_POST['old'] != ""){
 	if($_POST['password'] != $_POST['password2']){
 		die("Passwords do not match");
 	}
-	$sql = "UPDATE directors SET `password` = '".md5($_POST['password'])."' WHERE `password` = '".md5($_POST['old'])."' AND `name` = '".$_POST['name']."' AND `committee` = '".$_POST['committee']."'";
+  $committee = $_POST['committee'];
+  $committee_id = get_committee_id($committee);
+	$sql = "UPDATE budget_users SET `password` = '".md5($_POST['password'])."' WHERE `password` = '".md5($_POST['old'])."' AND `name` = '".$_POST['name']."' AND `committee_id` = '".$committee_id."'";
 	//echo $sql;
 	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	header("Location: index.php?auth=".$_POST['committee']."&comp=SPEC_OSL");
@@ -56,7 +58,7 @@ if($_POST['old'] != ""){
 								<td></td>
 								<td><input type="submit" value="Submit" /></td>
 							</tr>
-						</table>   
+						</table>
 					</div>
 				</div>
 		</form>

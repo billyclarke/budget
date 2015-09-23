@@ -38,23 +38,23 @@ if($_POST['year']){
 						&nbsp;&nbsp;&nbsp;Year: 
 						<?php
 							require_once("db.php");
-							$sql = 'SELECT `date` FROM `budget` WHERE 1 ORDER BY `date` DESC LIMIT 0, 1';
+							$sql = 'SELECT `action_date` FROM `budget_transactions` WHERE 1 ORDER BY `action_date` DESC LIMIT 0, 1';
 							$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 							$row = mysqli_fetch_array($result);
 							$e_date = $row[0];
 							$e_year = substr($e_date,0,4)+0;
 							$e_month = substr($e_date,5,2)+0;
 							$e_day = substr($e_date,8,2)+0;
-							
-							
-							$sql = 'SELECT `date` FROM `budget` WHERE 1 ORDER BY `date` ASC LIMIT 0, 1';
+
+
+							$sql = 'SELECT `action_date` FROM `budget_transactions` WHERE 1 ORDER BY `action_date` ASC LIMIT 0, 1';
 							$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 							$row = mysqli_fetch_array($result);
 							$s_date = $row[0];
 							$s_year = substr($s_date,0,4)+0;
 							$s_month = substr($s_date,5,2)+0;
 							$s_day = substr($s_date,8,2)+0;
-							
+
 							if(($s_month == 5 && $s_day >= 16) || $s_month > 5){
 								$st_year = $s_year;
 							}else{

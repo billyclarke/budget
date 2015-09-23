@@ -13,30 +13,6 @@ if($_SESSION['s_auth'] != "Admin"){
 	<body>
 		<table>
     <?php
-    $sql = 'SELECT `id`,`committee`,`position`, `name`, `password`, `email`, `deleted` FROM `directors` ORDER BY `id`';
-    $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-    while($row = mysqli_fetch_array($result)){
-      $id = $row[0];
-      $committee = $row[1];
-      $position = $row[2];
-      $name = $row[3];
-      $password = $row[4];
-      $email = $row[5];
-      $deleted = $row[6];
-      $committee_id = get_committee_id($committee);
-      $newsql = 'INSERT INTO `budget_users` (`id`, `committee_id`, `name`, `password`, `deleted`) VALUES (\''.$id.'\',\''.$committee_id.'\',\''.$name.'\',\''.$password.'\',\''.$deleted.'\');';
-      echo "
-      <tr>
-        <td>".stripslashes(ucwords($id))."&nbsp;</td>
-        <td>".stripslashes(ucwords($committee))."&nbsp;</td>
-        <td>".$committee_id."&nbsp;</td>
-        <td>".stripslashes(ucwords($name))."&nbsp;</td>
-        <td>".stripslashes(ucwords($deleted))."&nbsp;</td>
-        <td>".$newsql."&nbsp;</td>
-      </tr>";
-      //mysqli_query($GLOBALS["___mysqli_ston"], $newsql);
-    }
-
     ?>
     </table>
 <!--
@@ -68,6 +44,40 @@ if($_SESSION['s_auth'] != "Admin"){
         <td>".get_committee_id(stripslashes(ucwords($row[1])))."&nbsp;</td>
       </tr>";
     }
+
+
+
+    $sql = 'SELECT `id`,`committee`,`position`, `name`, `password`, `email`, `deleted` FROM `directors` ORDER BY `id`';
+    $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
+    while($row = mysqli_fetch_array($result)){
+      $id = $row[0];
+      $committee = $row[1];
+      $position = $row[2];
+      $name = $row[3];
+      $password = $row[4];
+      $email = $row[5];
+      $deleted = $row[6];
+      $committee_id = get_committee_id($committee);
+      $newsql = 'INSERT INTO `budget_users` (`id`, `committee_id`, `name`, `password`, `deleted`) VALUES (\''.$id.'\',\''.$committee_id.'\',\''.$name.'\',\''.$password.'\',\''.$deleted.'\');';
+      echo "
+      <tr>
+        <td>".stripslashes(ucwords($id))."&nbsp;</td>
+        <td>".stripslashes(ucwords($committee))."&nbsp;</td>
+        <td>".$committee_id."&nbsp;</td>
+        <td>".stripslashes(ucwords($name))."&nbsp;</td>
+        <td>".stripslashes(ucwords($deleted))."&nbsp;</td>
+        <td>".$newsql."&nbsp;</td>
+      </tr>";
+      //mysqli_query($GLOBALS["___mysqli_ston"], $newsql);
+    }
+
+
+
+
+
+
+
+
 function get_committee_id($committee_name){
   switch($committee_name){
     case "Admin":
