@@ -41,17 +41,22 @@ function get_committee_string($committee_id){
 }
 
 function get_user_id($user_name){
-  $sql = 'SELECT `id` FROM `directors` WHERE 1 AND `name` = \''.$user_name.'\' AND `deleted` = \'no\' LIMIT 1';
+  $sql = 'SELECT `id` FROM `budget_users` WHERE 1 AND `name` = \''.$user_name.'\' AND `deleted` = \'no\' LIMIT 1';
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   $row = mysqli_fetch_array($result);
   return $row[0];
 }
 
 function get_user_string($user_id){
-  $sql = 'SELECT `name` FROM `directors` WHERE 1 AND `id` = \''.$user_id.'\' LIMIT 1';
+  $sql = 'SELECT `name` FROM `budget_users` WHERE 1 AND `id` = \''.$user_id.'\' LIMIT 1';
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   $row = mysqli_fetch_array($result);
   return $row[0];
+}
+
+function get_user_email($user_id){
+  //TODO(wclarke): Implement
+  return '';
 }
 
 function get_type_id($type_string){

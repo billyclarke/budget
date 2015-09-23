@@ -23,10 +23,7 @@ while($row = mysqli_fetch_array($result)){
 	$budget_code = mysqli_fetch_row($result2);
 	$budget_code = $budget_code[0];
 
-	$sql = 'SELECT `email` FROM `directors` WHERE `name` =\''.$row[1].'\' AND `deleted` = \'no\'';
-	$result3 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$email = mysqli_fetch_row($result3);
-	$email = $email[0];
+	$email = get_user_email($requestor_id);
 }
 
 header("Expires: 0?");
