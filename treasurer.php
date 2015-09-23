@@ -68,6 +68,7 @@ for($i = 0; $i < sizeof($committees); $i++){
 		</script>
 	</head>
 	<body>
+    <p>Type_id of Purchasing Card is <?php echo get_type_id("Purchasing Card"); ?></p>
 		<table>
 			<tr>
 				<td valign="top">

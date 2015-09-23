@@ -55,7 +55,7 @@ function get_user_string($user_id){
 }
 
 function get_type_id($type_string){
-  if ($type == "ProCard"){
+  if ($type_string == "ProCard"){
     return 1;
   }
   $sql = 'SELECT `id` FROM `budget_transaction_types` WHERE 1 AND `name` = \''.$type_string.'\' LIMIT 1';

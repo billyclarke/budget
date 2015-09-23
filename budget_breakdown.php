@@ -103,7 +103,7 @@ $committee_id = get_committee_id($committee);
 						$debits = 0;
 						while($row = mysqli_fetch_array($result)){
               $type_id = $row[0];
-              $type_string = get_type_string($type_id);
+              $type = get_type_string($type_id);
               $action_date = $row[1];
               $item = $row[2];
               $vendor = $row[3];
@@ -137,7 +137,7 @@ $committee_id = get_committee_id($committee);
 							}
 							$pc1 = "";
 							$pc2 = "";
-							if($type_id == get_type_id("Purchasing Card")){
+							if($type == "Purchasing Card"){
 								$pc1 = "<a href='createpcard.php?id=".$id."'>";
 								$pc2 = "</a>";
 							}
