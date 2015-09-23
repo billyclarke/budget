@@ -17,10 +17,10 @@ body  {font-family: arial, helvetica, geneva, sans-serif; font-size: small}
 </style>
 </head>
 <frameset rows="46,*">
-	<frame src="http://www.specevents.net/budget/spec_logo.php?sid=<?php echo $_GET['sid']; ?>&auth=<?php echo $_SESSION['s_auth']; ?>" frameborder=0 noresize>
+	<frame src="https://www.specevents.net/budget/spec_logo.php?sid=<?php echo $_GET['sid']; ?>&auth=<?php echo $_SESSION['s_auth']; ?>" frameborder=0 noresize>
 	<frameset cols="165,*">
-		<frame src="http://www.specevents.net/budget/admin_nav.php?sid=<?php echo $_GET['sid']; ?>" name="nav" frameborder=0 noresize>
-		<frame src="http://www.specevents.net/budget/treasurer.php?sid=<?php echo $_GET['sid']; ?>" name="home" frameborder=0 noresize>
+		<frame src="https://www.specevents.net/budget/admin_nav.php?sid=<?php echo $_GET['sid']; ?>" name="nav" frameborder=0 noresize>
+		<frame src="https://www.specevents.net/budget/treasurer.php?sid=<?php echo $_GET['sid']; ?>" name="home" frameborder=0 noresize>
 	</frameset>
 </frameset>
 </html>
