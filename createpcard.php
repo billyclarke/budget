@@ -1,7 +1,6 @@
 <?php
 require_once("db.php");
 require_once("check_auth.php");
-require_once("functions.php");
 
 $pcard_type_id = get_type_id("Purchasing Card");
 

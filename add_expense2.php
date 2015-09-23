@@ -63,7 +63,8 @@ if($validated == "no"){
 }
 
 require_once("check_auth.php");
-require_once("functions.php");
+require_once("db.php");
+require_once("set_dates.php");
 $today = date("Y-m-d");
 $date = $_POST['paid_date'];
 $date = substr($date,6,4)."-".substr($date,0,2)."-".substr($date,3,2);

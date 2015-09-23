@@ -1,6 +1,6 @@
 <?php
 require_once("check_auth.php");
-require_once("functions.php");
+require_once("db.php");
 
 $sql = 'SELECT `committee_id`, `requestor_id`, `action_date`, `item`, `vendor`, `cost`, `category_id`, `submitted_date` FROM `budget_transactions` WHERE `id` = '.$_GET["id"].' AND `type_id` = \''.get_type_id("Internal Budget Transfer").'\' AND `deleted` = \'no\'';
 $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);

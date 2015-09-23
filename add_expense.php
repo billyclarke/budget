@@ -4,7 +4,7 @@ if(!isset($_GET['committee'])){
 	die("No committee selected");
 }
 $committee = $_GET['committee'];
-require_once("functions.php");
+require_once("db.php");
 if($committee == "Admin"){
 	die("The Admin usergroup does not have an associated budget.");
 }

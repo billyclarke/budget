@@ -2,6 +2,7 @@
 require_once("db.php");
 require_once("check_auth.php");
 require_once("functions.php");
+require_once("set_dates.php");
 $committee = $_GET['committee'];
 $committee_id = get_committee_id($committee);
 ?>
