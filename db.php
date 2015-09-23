@@ -58,7 +58,10 @@ function get_type_id($type_string){
   if ($type_string == "ProCard"){
     return 1;
   }
-  $sql = 'SELECT `id` FROM `budget_transaction_types` WHERE 1 AND `name` = \''.$type_string.'\' LIMIT 1';
+  $sql = 'SELECT `id` FROM `budget_transaction_types` WHERE 1 AND `name` = \''.$type_string.'\' LIMIT 1'; 
+  $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
+  $row = mysqli_fetch_array($result);
+  return $row[0];
 }
 
 function get_type_string($type_id){
