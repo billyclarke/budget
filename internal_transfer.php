@@ -57,7 +57,7 @@ if($_SESSION['s_auth'] != "Admin"){
         $to_committee_id = get_committee_id($to_committee);
 		?>
 				<form action="internal_transfer.php" method="POST">
-					<input type="hidden" name="from_committee" value="<?php echo ; ?>" />
+					<input type="hidden" name="from_committee" value="<?php echo $from_committee; ?>" />
 					<input type="hidden" name="to_committee" value="<?php echo $to_committee; ?>" />
 					<table>
 						<tr>

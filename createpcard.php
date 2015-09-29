@@ -9,9 +9,9 @@ $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 while($row = mysqli_fetch_array($result)){
 	$committee_id = $row[0];
-	$committee = $get_committee_string($committee_id);
+	$committee = get_committee_string($committee_id);
 	$requestor_id = $row[1];
-	$requestor = $get_user_string($requestor_id);
+	$requestor = get_user_string($requestor_id);
 	$action_date = $row[2];
 	$item = $row[3];
 	$vendor = $row[4];
