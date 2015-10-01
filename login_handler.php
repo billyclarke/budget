@@ -3,7 +3,8 @@ session_start();
 require_once("db.php");
 $user_id = $_POST["user_id"];
 if(!check_user_password($user_id, $_POST["password"])){
-	header("Location: index.php?loginretry=y");
+	header("Location: ./?loginretry=y");
+  die("Incorrect Password");
 }
 if(md5($_POST["password"]) == md5("SPEC Events")){
 	header("Location: reset_password.php?name=".$_POST["name"]."&committee=".$_POST['auth']);
