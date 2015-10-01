@@ -9,6 +9,16 @@ require_once("dbpass.php");
 	   die('Could not connect: ' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)));
 	}
 
+function to_2d_array($result){
+  $rows = array();
+  $i = 0;
+  while ($row = mysqli_fetch_array($result, MYSQLI_NUM)){
+    $rows[$i++] = $row;
+  }
+  return $rows;
+}
+
+
 //================================================
 // Category
 //================================================
@@ -48,6 +58,13 @@ function get_committee_string($committee_id){
   return $row[0];
 }
 
+function get_committees_id_name(){
+	$sql = 'SELECT `id`, `fullname` FROM `budget_committees` ORDER BY `fullname` ASC';
+	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
+  return to_2d_array($result);
+}
+
+
 function get_committees(){
 	$sql = 'SELECT `fullname` FROM `budget_committees` ORDER BY `fullname` ASC';
 	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
@@ -56,9 +73,7 @@ function get_committees(){
 		$committees_temp[$i] = $row[0];
 		$i++;
 	}
-	//Remove duplicate entries
-	$committees = array_keys(array_flip($committees_temp));
-	return $committees;
+	return $committees_temp;
 }
 
 //================================================
@@ -96,16 +111,6 @@ function get_user_id_name_for_committee_id($committee_id){
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   return to_2d_array($result);
 }
-
-function to_2d_array($result){
-  $rows = array();
-  $i = 0;
-  while ($row = mysqli_fetch_array($result, MYSQLI_NUM)){
-    $rows[$i++] = $row;
-  }
-  return $rows;
-}
-
 
 function check_user_password($user_id, $password){
   $sql = 'SELECT `id` FROM `budget_users` WHERE `id` = \''.$user_id.'\' AND `password` = \''.encrypt_user_password($password).'\' AND `deleted` = \'no\' LIMIT 0,1';
