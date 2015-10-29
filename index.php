@@ -6,8 +6,32 @@ if($_GET['destroy'] == "yes"){
 }
 require_once("db.php");
 if(!$_GET['auth']){
-	die("No committee specified.");
-}
+?>
+<html>
+  <head>
+    <title>SPEC Budget</title>
+		<link type="text/css" rel="stylesheet" href="style.css" />
+    <style>a{font-size:large}</style>
+  </head>
+  <body>
+    <br>
+    <center style="font-size:large">Select a committee</center>
+    <br>
+    <center><a href="?auth=Admin&comp=SPEC_OSL">Admin</a></center>
+    <center><a href="?auth=Art Gallery&comp=SPEC_OSL">Art Collective</a></center>
+    <center><a href="?auth=Concerts&comp=SPEC_OSL">Concerts</a></center>
+    <center><a href="?auth=Connaissance&comp=SPEC_OSL">Connaissance</a></center>
+    <center><a href="?auth=Film&comp=SPEC_OSL">Film</a></center>
+    <center><a href="?auth=Jazz and Grooves&comp=SPEC_OSL">Jazz and Grooves</a></center>
+    <center><a href="?auth=Special Events&comp=SPEC_OSL">Pop Up</a></center>
+    <center><a href="?auth=Sound&comp=SPEC_OSL">Sound</a></center>
+    <center><a href="?auth=SPEC-TRUM&comp=SPEC_OSL">SPEC-TRUM</a></center>
+    <center><a href="?auth=Spring Fling&comp=SPEC_OSL">Spring Fling</a></center>
+  </body>
+</html>
+
+<?php
+} else {
 ?>
 <html>
 	<head>
@@ -51,3 +75,6 @@ if(!$_GET['auth']){
 			</form>
 	</body>
 </html>
+<?php
+}
+?>
