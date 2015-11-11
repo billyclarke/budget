@@ -19,10 +19,11 @@ while($row = mysqli_fetch_array($result)){
   $category_id = $row[6];
 	$submitted_date = $row[7];
 
-	$sql = 'SELECT `budget_code` FROM `budget_categories` WHERE `category_id` = \''.$category_id.'\' AND `deleted` = \'no\'';
-	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
-	$budget_code = mysqli_fetch_row($result2);
-	$budget_code = $budget_code[0];
+	$sql2 = 'SELECT `budget_code`, `name` FROM `budget_categories` WHERE `id` = \''.$category_id.'\' AND `deleted` = \'no\'';
+	$result2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql2);
+	$row2 = mysqli_fetch_row($result2);
+	$budget_code = $row2[0];
+	$budget_category_name = $row2[1];
 
 	$email = get_user_email($requestor_id);
 }
@@ -244,7 +245,7 @@ style='font-size:8.0pt;line-height:50%'>&nbsp;</span></p>
   padding:0in 5.4pt 0in 5.4pt;height:50.0pt'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-size:14.0pt'><br>
-  <?php echo $budget_code;?> </span></p>
+  <?php echo $budget_code.' - '.$budget_category_name;?> </span></p>
   </td>
  </tr>
 </table>
