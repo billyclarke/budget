@@ -44,6 +44,13 @@ function setUserOptions(committee_id){
         </select>
         <label for="user_id" class="sr-only">Name</label>
         <select class="form-control" id="user_id" name="user_id">
+          <?php $users = get_user_id_name_for_committee_id(0);
+            foreach($users as $user){
+              $id = $user[0];
+              $name = $user[1];
+              echo'<option value="'.$id.'">'.$name.'</option>';
+            }
+          ?>
         </select>
         <label for="password" class="sr-only">Password</label>
         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
