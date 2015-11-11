@@ -7,7 +7,7 @@
   </head>
   <body style="padding-top:70px">
     <?php require("navbar.php") ?>
-    <div><p>Welcome  <?php echo get_user_string($_SESSION["s_user_id"])?></p></div>
+    <div><p>Committee  <?php echo get_committee_string($_SESSION["s_committee_id"]); ?></p></div>
 
     <?php require("bootstrap_foot.html"); ?>
   </body>

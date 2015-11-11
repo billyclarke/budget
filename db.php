@@ -100,7 +100,7 @@ function get_user_email($user_id){
 }
 
 function get_committee_id_for_user_id($user_id){
-  $sql = 'SELECT `committee_id`, FROM `budget_users` WHERE `id` = \''.$user_id.'\' AND `deleted` = \'no\' LIMIT 0,1';
+  $sql = 'SELECT `committee_id` FROM `budget_users` WHERE `id` = \''.$user_id.'\' AND `deleted` = \'no\' LIMIT 1';
   $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
   $row = mysqli_fetch_array($result);
   return $row[0];
