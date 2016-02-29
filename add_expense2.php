@@ -77,7 +77,7 @@ $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 $item_id = ((is_null($___mysqli_res = mysqli_insert_id($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
 
 
-$sql = 'SELECT `cost` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.get_committee_id($_POST['committee']).'\' AND `deleted` = \'no\' AND `date` > \''.$start_date.'\' AND `date` < \''.$end_date.'\'';
+$sql = 'SELECT `cost` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.get_committee_id($_POST['committee']).'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 $result_budget = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 $total_budget = 0;
 $total_expenses = 0;
