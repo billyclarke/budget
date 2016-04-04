@@ -48,7 +48,7 @@ $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 </html>
 <?php
 }else{
-	$sql = "UPDATE directors SET `password` = '954410f8c3784f2a8c87aeab8a1f60f8' WHERE `id` = '".$_GET['id']."'";
+	$sql = "UPDATE budget_users SET `password` = '954410f8c3784f2a8c87aeab8a1f60f8' WHERE `id` = '".$_GET['id']."'";
 	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	header("Location: committee_budget.php?committee=".$_GET['committee']);
 }
