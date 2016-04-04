@@ -39,6 +39,7 @@ if($committee == "Admin"){
 	</head>
 	<body>
 		<?php
+      // Get all warnings and display
 			$sql = 'SELECT `warning` FROM `warning` WHERE 1 AND `committee` = \''.$committee.'\' AND `treasurer_cleared` = \'no\' AND `advisor_cleared` = \'no\' ORDER BY `id` DESC LIMIT 0, 5';
 			$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			if(mysqli_num_rows($result) > 0){
@@ -61,14 +62,17 @@ if($committee == "Admin"){
 		$sub_budgets = "";
 		$total_budget = 0;
 		$total_costs = 0;
-		$sql = 'SELECT `id` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' ORDER BY `name` ASC';
+    // Get all budget categories for the selected committee
+		$sql = 'SELECT `id`, `deleted` FROM `budget_categories` WHERE 1 AND `committee_id` = \''.$committee_id.'\' ORDER BY `name` ASC';
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 		while($row = mysqli_fetch_array($result)){
       $category_id = $row[0];
+      $deleted = $row[1];
       $category = get_category_string($category_id);
 			$item_count++;
 			$budget = 0;
 			$expenses = 0;
+      // Get all transactions within a given year for each category
 			$sql = 'SELECT `cost`,`type_id` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `category_id` = \''.$category_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\'';
 			$result_2 = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 			while($row_2 = mysqli_fetch_array($result_2)){
@@ -84,11 +88,29 @@ if($committee == "Admin"){
 					$budget = $budget + $cost;
 				}
 			}
-			$sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category,'budget_breakdown.php?committee='.$committee.'&main='.$category)."</td></tr>";
+      // Draw the color bar for the category
+      // Do not schow the category to the committee directors if it has no money allocated to it and no expenses against it
+      // If it does have money allocated or expenses, but has since been deleted, show "(Deleted)" after the name
+      // For admins, show all categories, with "(Deleted)" after the deleted categories
+      //
+      // The purpose of this is to always show categories with transactions, even if they are deleted.
+      // This is especially important when viewing previous years, where previously used categories may have been deleted in later years.
+
+      if ($budget > 0 || $expenses < 0){
+        $category_print_name = $category.($deleted == "yes"?" (Deleted)" : "");
+        $sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category_print_name,'budget_breakdown.php?committee='.$committee.'&main='.$category)."</td></tr>";
+      }
+      elseif ($_SESSION['s_auth']) {
+        $category_print_name = $category." (Hidden".($deleted == "yes"?", Deleted" : "").")";
+        $sub_budgets = $sub_budgets."<tr><td>".draw_expense($expenses,$budget,$category_print_name,'budget_breakdown.php?committee='.$committee.'&main='.$category)."</td></tr>";
+      }
 			$total_costs = $total_costs + $expenses;
 			$total_budget = $total_budget + $budget;
 		}
+    // Draw the color bar for the committee sum
 		echo "<tr><td height='100px'>".draw_expense($total_costs, $total_budget, $committee." Total Budget",'')."</td>";
+
+    // Generate table of last list of the last 15 transactions
 		$sql = 'SELECT `type_id`,`action_date`,`item`,`vendor`,`cost`,`category_id`,`subcategory` FROM `budget_transactions` WHERE 1 AND `committee_id` = \''.$committee_id.'\' AND `deleted` = \'no\' AND `action_date` > \''.$start_date.'\' AND `action_date` < \''.$end_date.'\' ORDER BY `action_date` DESC LIMIT 0, 15';
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 		echo "<td rowspan='".$item_count."' valign='top'>";
