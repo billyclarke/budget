@@ -52,7 +52,7 @@ $result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 </html>
 <?php
 }else{
-	$sql = "UPDATE budget_category SET `deleted` = 'yes' WHERE `id` = '".$_GET['id']."'";
+	$sql = "UPDATE budget_categories SET `deleted` = 'yes' WHERE `id` = '".$_GET['id']."'";
 	$result = mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 	header("Location: committee_budget.php?committee=".$_GET['committee']);
 }
