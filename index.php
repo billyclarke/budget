@@ -9,9 +9,10 @@ if(!$_GET['auth']){
 ?>
 <html>
   <head>
-    <title>SPEC Budget</title>
+    	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    	<title>SPEC Budget</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
-    <style>a{font-size:large}</style>
+    	<style>a{font-size:large}</style>
   </head>
   <body>
     <br>
