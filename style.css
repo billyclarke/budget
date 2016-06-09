@@ -13,9 +13,7 @@
 }
 
 html,
-body {
-  font-family: 'Roboto', sans-serif;
-}
+body,
 div,
 h1,
 h2,
@@ -50,6 +48,7 @@ applet {
 }
 body {
     font-size: 62.5%;
+    font-family: Tahoma, sans-serif;
     color: #000;
     background: #fff
 }
