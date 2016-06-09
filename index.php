@@ -36,7 +36,7 @@ if(!$_GET['auth']){
 <html>
 	<head>
 		<title>SPEC Budget Login</title>
-		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<br />
