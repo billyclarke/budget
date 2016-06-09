@@ -10,7 +10,7 @@ if(!$_GET['auth']){
 <html>
   <head>
     <title>SPEC Budget</title>
-		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <style>a{font-size:large}</style>
   </head>
   <body>
