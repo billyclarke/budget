@@ -9,13 +9,6 @@ if(!$_GET['auth']){
 ?>
 <html>
   <head>
-    	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    	<style>
-     		body {
-        		font-family: 'Tangerine', serif;
-        	font-size: 48px;
-      		}
-	 </style>
     	<title>SPEC Budget</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
     	<style>a{font-size:large}</style>
