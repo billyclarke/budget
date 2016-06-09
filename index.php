@@ -10,7 +10,7 @@ if(!$_GET['auth']){
 <html>
   <head>
     <title>SPEC Budget</title>
-		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link href="style.css" rel="stylesheet" type="text/css">
     <style>a{font-size:large}</style>
   </head>
   <body>
@@ -36,7 +36,7 @@ if(!$_GET['auth']){
 <html>
 	<head>
 		<title>SPEC Budget Login</title>
-		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<br />
